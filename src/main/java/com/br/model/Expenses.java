@@ -1,131 +1,88 @@
 package com.br.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import java.io.Serializable;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
-public class Expenses {
+@Table(name = "expenses")
+public class Expenses implements Serializable {
+ 
+	@Id
+	@Column(name = "id")
+	int id;
+	@Column(name = "description")
+	String description;
+	@Column(name = "created_at")
+	String createdAt;
+	@Column(name = "created_by")
+	int createdBy;
+	@Column(name = "updated_by")
+	int updatedBy;
+	@Column(name = "value")
+	double value;
+	@Column(name = "category_id")
+	double categoryId;
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
-    private int idUser;
-    private String dateCreated;
-    private String description;
-    private String dateUpdated;
-    private int idCategory;
-    private int createdBy;
+	public Expenses() {
+	}
 
-    public Expenses() {
-    }
-
-
-	
-	public Long getId() {
+	public int getId() {
 		return id;
 	}
 
-
-
-	public void setId(Long id) {
+	public void setId(int id) {
 		this.id = id;
 	}
-
-
-
-	public int getIdUser() {
-		return idUser;
-	}
-
-
-
-	public void setIdUser(int idUser) {
-		this.idUser = idUser;
-	}
-
-
-
-	public String getDateCreated() {
-		return dateCreated;
-	}
-
-
-
-	public void setDateCreated(String dateCreated) {
-		this.dateCreated = dateCreated;
-	}
-
-
 
 	public String getDescription() {
 		return description;
 	}
 
-
-
 	public void setDescription(String description) {
 		this.description = description;
 	}
 
-
-
-	public String getDateUpdated() {
-		return dateUpdated;
+	public String getCreatedAt() {
+		return createdAt;
 	}
 
-
-
-	public void setDateUpdated(String dateUpdated) {
-		this.dateUpdated = dateUpdated;
+	public void setCreatedAt(String createdAt) {
+		this.createdAt = createdAt;
 	}
-
-
-
-	public int getIdCategory() {
-		return idCategory;
-	}
-
-
-
-	public void setIdCategory(int idCategory) {
-		this.idCategory = idCategory;
-	}
-
-
 
 	public int getCreatedBy() {
 		return createdBy;
 	}
 
-
-
 	public void setCreatedBy(int createdBy) {
 		this.createdBy = createdBy;
 	}
 
-
-
-	public Expenses(
-			int idUser,
-			String dateCreated,
-			String description,
-			String dateUpdated,
-			int idCategory,
-			int createdBy) {
-		this.idUser = idUser;
-		this.dateCreated = dateCreated;
-		this.description = description;
-		this.dateUpdated = dateUpdated;
-		this.idCategory = idCategory;
-		this.createdBy = createdBy;
+	public int getUpdatedBy() {
+		return updatedBy;
 	}
-	
+
+	public void setUpdatedBy(int updatedBy) {
+		this.updatedBy = updatedBy;
+	}
+
+	public double getValue() {
+		return value;
+	}
+
+	public void setValue(double value) {
+		this.value = value;
+	}
+
+	public double getCategoryId() {
+		return categoryId;
+	}
+
+	public void setCategoryId(double categoryId) {
+		this.categoryId = categoryId;
+	}
 }
-
-
-
-
-

@@ -35,6 +35,30 @@ public class ExpensesControllerTests {
 				.contentType(MediaType.APPLICATION_JSON).accept(MediaType.APPLICATION_JSON));
 
 	}
+	
+	@Test
+	public void update() throws Exception {
+		Expenses expense = new Expenses();
+		mvc.perform(MockMvcRequestBuilders.put("/api/v1/expenses/").content(asJsonString(expense))
+				.contentType(MediaType.APPLICATION_JSON).accept(MediaType.APPLICATION_JSON));
+
+	}
+	
+	@Test
+	public void delete() throws Exception {
+		Expenses expense = new Expenses();
+		mvc.perform(MockMvcRequestBuilders.delete("/api/v1/expenses/").content(asJsonString(expense))
+				.contentType(MediaType.APPLICATION_JSON).accept(MediaType.APPLICATION_JSON));
+
+	}
+	
+	@Test
+	public void findById() throws Exception {
+		Expenses expense = new Expenses();
+		mvc.perform(MockMvcRequestBuilders.get("/api/v1/expenses/").content(asJsonString(expense))
+				.contentType(MediaType.APPLICATION_JSON).accept(MediaType.APPLICATION_JSON));
+
+	}
 
 	public static String asJsonString(final Object obj) {
 		try {

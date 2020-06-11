@@ -21,7 +21,6 @@ public class ExpensesControllerTests {
 	@Autowired
 	private MockMvc mvc;
 
-
 	@Test
 	public void findAll() throws Exception {
 		mvc.perform(MockMvcRequestBuilders.get("/api/v1/expenses/").accept(MediaType.APPLICATION_JSON))

@@ -13,7 +13,7 @@ public class Expenses implements Serializable {
  
 	@Id
 	@Column(name = "id")
-	int id;
+	Long id;
 	@Column(name = "description")
 	String description;
 	@Column(name = "created_at")
@@ -25,16 +25,16 @@ public class Expenses implements Serializable {
 	@Column(name = "value")
 	double value;
 	@Column(name = "category_id")
-	double categoryId;
+	int categoryId;
 
 	public Expenses() {
 	}
 
-	public int getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
@@ -82,7 +82,16 @@ public class Expenses implements Serializable {
 		return categoryId;
 	}
 
-	public void setCategoryId(double categoryId) {
+	public void setCategoryId(int categoryId) {
 		this.categoryId = categoryId;
 	}
+	
+	public Expenses(String description, String createdAt, int categoryId, double value, int updatedBy, int createdBy) {
+		  this.description = description;
+		  this.createdAt = createdAt;
+		  this.categoryId = categoryId;
+		  this.value = value;
+		  this.updatedBy = updatedBy;
+		  this.createdBy = createdBy;
+	    }
 }

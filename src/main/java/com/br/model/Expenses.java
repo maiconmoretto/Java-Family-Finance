@@ -10,18 +10,16 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "expenses")
 public class Expenses implements Serializable {
- 
+  
 	@Id
 	@Column(name = "id")
-	Long id;
+	int id;
 	@Column(name = "description")
 	String description;
 	@Column(name = "created_at")
 	String createdAt;
 	@Column(name = "created_by")
 	int createdBy;
-	@Column(name = "updated_by")
-	int updatedBy;
 	@Column(name = "value")
 	double value;
 	@Column(name = "category_id")
@@ -30,11 +28,11 @@ public class Expenses implements Serializable {
 	public Expenses() {
 	}
 
-	public Long getId() {
+	public int getId() {
 		return id;
 	}
 
-	public void setId(Long id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 
@@ -62,14 +60,6 @@ public class Expenses implements Serializable {
 		this.createdBy = createdBy;
 	}
 
-	public int getUpdatedBy() {
-		return updatedBy;
-	}
-
-	public void setUpdatedBy(int updatedBy) {
-		this.updatedBy = updatedBy;
-	}
-
 	public double getValue() {
 		return value;
 	}
@@ -86,12 +76,11 @@ public class Expenses implements Serializable {
 		this.categoryId = categoryId;
 	}
 	
-	public Expenses(String description, String createdAt, int categoryId, double value, int updatedBy, int createdBy) {
+	public Expenses(String description, String createdAt, int categoryId, double value, int createdBy) {
 		  this.description = description;
 		  this.createdAt = createdAt;
 		  this.categoryId = categoryId;
 		  this.value = value;
-		  this.updatedBy = updatedBy;
 		  this.createdBy = createdBy;
 	    }
 }

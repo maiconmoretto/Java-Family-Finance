@@ -21,7 +21,7 @@ public class ExpensesService {
 		return repository.findAll();
 	}
 	
-	public Expenses findById(Long id) {
+	public Expenses findById(int id) {
 		return repository.findById(id).get();
 	}	
 
@@ -39,7 +39,7 @@ public class ExpensesService {
 		return new ResponseEntity<>("Expenses successfully updated", HttpStatus.OK);
 	}
 
-	public ResponseEntity<String> deleteById(Long id) {
+	public ResponseEntity<String> deleteById(int id) {
 		repository.deleteById(id);
 		return new ResponseEntity<>("Expenses successfully deleted", HttpStatus.OK);
 	}

@@ -22,21 +22,12 @@ CREATE TABLE IF NOT EXISTS `family_finance`.`expenses` (
   `description` VARCHAR(255) NOT NULL,
   `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   `created_by` INT NOT NULL,
-  `id_category` INT NOT NULL,
+  `category_id` INT NOT NULL,
   `value` DOUBLE NOT NULL,
-  `updated_by` INT NULL,
   `updated_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
-  INDEX `created_by` (`created_by` ASC) ,
-  CONSTRAINT `created_by`
-    FOREIGN KEY (`created_by`)
-    REFERENCES `family_finance`.`user` (`id`)
-	ON DELETE CASCADE,
-  INDEX `updated_by` (`updated_by` ASC) ,
-  CONSTRAINT `updated_by`
-    FOREIGN KEY (`updated_by`)
-    REFERENCES `family_finance`.`user` (`id`)
-	ON DELETE CASCADE)
+    FOREIGN KEY `category_id_expenses`( `category_id`) REFERENCES  `family_finance`.`category` (`id`)
+)
 ENGINE = InnoDB;
 
 
@@ -63,11 +54,7 @@ CREATE TABLE IF NOT EXISTS `family_finance`.`income` (
   `updated_by` INT NULL,
   `updated_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
-  INDEX `created_by` (`created_by` ASC) ,
-  CONSTRAINT `created_by`
-    FOREIGN KEY (`created_by`)
-    REFERENCES `family_finance`.`user` (`id`)
-	ON DELETE CASCADE)
+    FOREIGN KEY `created_by_income`( `created_by`) REFERENCES  `family_finance`.`user` (`id`))
 ENGINE = InnoDB;
 
 

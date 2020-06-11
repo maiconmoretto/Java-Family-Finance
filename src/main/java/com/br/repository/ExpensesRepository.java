@@ -1,10 +1,10 @@
 package com.br.repository;
 
 
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.br.model.Expenses;
 
-public interface ExpensesRepository extends CrudRepository<Expenses, Long> {
+public interface ExpensesRepository extends JpaRepository<Expenses, Integer> {
 
 }

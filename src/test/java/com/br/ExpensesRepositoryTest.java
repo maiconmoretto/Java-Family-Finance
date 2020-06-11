@@ -47,7 +47,7 @@ public class ExpensesRepositoryTest {
 		expenseList.add(expense);
 		expenseList.add(expense);
 		expenseList.add(expense);
-		when(repository.findAll()).thenReturn((Iterable<Expenses>) expenseList);
+		when(repository.findAll()).thenReturn((List<Expenses>) expenseList);
 		List<Expenses> result = (List<Expenses>) repository.findAll();
 		assertEquals(3, result.size());
 	}
@@ -59,9 +59,9 @@ public class ExpensesRepositoryTest {
 		expense.setDescription("description");
 		expense.setValue(3.33);
 		expense.setCreatedBy(1);
-		expense.setId((long )1);
-		repository.deleteById((long) expense.getId());
-		verify(repository, times(1)).deleteById((long) expense.getId());
+		expense.setId(1);
+		repository.deleteById(expense.getId());
+		verify(repository, times(1)).deleteById(expense.getId());
 	}
 
 	@Test
@@ -96,9 +96,9 @@ public class ExpensesRepositoryTest {
 
 	@Test
 	public void findById() {
-		Optional<Expenses> agenda = Optional.of(new Expenses("description", "01-01-01 01:01:01", 1, 3.33, 1, 1));
-		when(repository.findById((long) 1)).thenReturn(agenda);
-		Optional<Expenses> result = repository.findById((long) 1);
+		Optional<Expenses> agenda = Optional.of(new Expenses("description", "01-01-01 01:01:01", 1, 3.33, 1));
+		when(repository.findById(1)).thenReturn(agenda);
+		Optional<Expenses> result = repository.findById(1);
 		assertEquals("description", result.get().getDescription());
 		assertEquals("01-01-01 01:01:01", result.get().getCreatedAt());
 		assertEquals(3.33, result.get().getValue(), 0.00);

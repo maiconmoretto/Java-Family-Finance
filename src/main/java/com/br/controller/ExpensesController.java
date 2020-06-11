@@ -25,23 +25,23 @@ public class ExpensesController {
 		return service.findAll();
 	}
 
-	@GetMapping("/api/v1/expense/{id}")
-	public Expenses findById(@PathVariable Long id) {
+	@GetMapping("/api/v1/expenses/{id}")
+	public Expenses findById(@PathVariable int id) {
 		return service.findById(id);
 	}
 
-	@PostMapping(path = "/api/v1/expense/")
+	@PostMapping(path = "/api/v1/expenses/")
 	public @ResponseBody ResponseEntity save(@RequestBody Expenses expense) {
 		return service.save(expense);
 	}
 
-	@PutMapping(value = "/api/v1/expense/{id}")
+	@PutMapping(value = "/api/v1/expenses/{id}")
 	public ResponseEntity<String> update(@RequestBody Expenses expense) {
 		return service.update(expense);
 	}
 
-	@DeleteMapping(path = "/api/v1/expense/{id}")
-	public ResponseEntity<String> deleteById(@PathVariable Long id) {
+	@DeleteMapping(path = "/api/v1/expenses/{id}")
+	public ResponseEntity<String> deleteById(@PathVariable int id) {
 		return service.deleteById(id);
 	}
 

@@ -29,7 +29,7 @@ public class ExpensesControllerTests {
 
 	@Test
 	public void save() throws Exception {
-		Expenses expense = new Expenses();
+		Expenses expense = new Expenses("description", "01-01-01 01:01:01", 1, 3.33, 1);
 		mvc.perform(MockMvcRequestBuilders.post("/api/v1/expenses/").content(asJsonString(expense))
 				.contentType(MediaType.APPLICATION_JSON).accept(MediaType.APPLICATION_JSON));
 

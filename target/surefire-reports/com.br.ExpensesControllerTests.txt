@@ -1,12 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.br.ExpensesControllerTests
 -------------------------------------------------------------------------------
-Tests run: 5, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 6.2 s <<< FAILURE! - in com.br.ExpensesControllerTests
-save  Time elapsed: 0.1 s  <<< ERROR!
-org.springframework.web.util.NestedServletException: Request processing failed; nested exception is org.springframework.orm.jpa.JpaSystemException: ids for this class must be manually assigned before calling save(): com.br.model.Expenses; nested exception is org.hibernate.id.IdentifierGenerationException: ids for this class must be manually assigned before calling save(): com.br.model.Expenses
-	at com.br.ExpensesControllerTests.save(ExpensesControllerTests.java:33)
-Caused by: org.springframework.orm.jpa.JpaSystemException: ids for this class must be manually assigned before calling save(): com.br.model.Expenses; nested exception is org.hibernate.id.IdentifierGenerationException: ids for this class must be manually assigned before calling save(): com.br.model.Expenses
-	at com.br.ExpensesControllerTests.save(ExpensesControllerTests.java:33)
-Caused by: org.hibernate.id.IdentifierGenerationException: ids for this class must be manually assigned before calling save(): com.br.model.Expenses
-	at com.br.ExpensesControllerTests.save(ExpensesControllerTests.java:33)
-
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.395 s - in com.br.ExpensesControllerTests

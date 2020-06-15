@@ -27,6 +27,7 @@ CREATE TABLE IF NOT EXISTS `family_finance`.`expenses` (
   `updated_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
     FOREIGN KEY `category_id_expenses`( `category_id`) REFERENCES  `family_finance`.`category` (`id`)
+    ON DELETE CASCADE
 )
 ENGINE = InnoDB;
 
@@ -54,7 +55,8 @@ CREATE TABLE IF NOT EXISTS `family_finance`.`income` (
   `updated_by` INT NULL,
   `updated_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
-    FOREIGN KEY `created_by_income`( `created_by`) REFERENCES  `family_finance`.`user` (`id`))
+    FOREIGN KEY `created_by_income`( `created_by`) REFERENCES  `family_finance`.`user` (`id`)
+    ON DELETE CASCADE)
 ENGINE = InnoDB;
 
 
@@ -71,6 +73,7 @@ CREATE TABLE IF NOT EXISTS `family_finance`.`category` (
   `updated_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
    FOREIGN KEY `created_by_category`( `created_by`) REFERENCES  `family_finance`.`user` (`id`)
+   ON DELETE CASCADE
 )
 ENGINE = InnoDB;
 
@@ -86,6 +89,7 @@ CREATE TABLE IF NOT EXISTS `family_finance`.`shared_finances` (
   PRIMARY KEY (`id`),
    FOREIGN KEY `user_id_shared_finances`( `user_id`) REFERENCES  `family_finance`.`user` (`id`),
    FOREIGN KEY `shared_user_id_shared_finances`( `shared_user_id`) REFERENCES  `family_finance`.`user` (`id`)
+   ON DELETE CASCADE
    )
 ENGINE = InnoDB;
 
@@ -101,6 +105,7 @@ CREATE TABLE IF NOT EXISTS `family_finance`.`income` (
   `created_by` INT NOT NULL,
   PRIMARY KEY (`id`),
    FOREIGN KEY `created_by_income`( `created_by`) REFERENCES  `family_finance`.`user` (`id`)
+   ON DELETE CASCADE
 )
 ENGINE = InnoDB;
 

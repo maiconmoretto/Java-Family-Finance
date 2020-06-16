@@ -362,7 +362,7 @@
 			"protocolProfileBehavior": {}
 		},
 		{
-			"name": "User Copy",
+			"name": "Income",
 			"item": [
 				{
 					"name": "ADD",
@@ -379,7 +379,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n   \"name\": \"teste da silva\",\n   \"email\": \"teste@test\"\n}",
+							"raw": "    {\n        \"description\": \"despesa 1\",\n        \"value\": 3.33,\n        \"createdAt\": \"2001-01-01 01:01:01\",\n        \"updatedAt\": \"2020-06-16 18:07:55\",\n        \"createdBy\": 3\n    },",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -387,7 +387,7 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:8282/api/v1/user/",
+							"raw": "localhost:8282/api/v1/income/",
 							"host": [
 								"localhost"
 							],
@@ -395,7 +395,7 @@
 							"path": [
 								"api",
 								"v1",
-								"user",
+								"income",
 								""
 							]
 						}
@@ -417,7 +417,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n   \"id\": 2,\n   \"name\": \"teste da silva santos\",\n   \"email\": \"teste@test\"\n}",
+							"raw": "    {\n        \"id\" : 3,\n        \"description\": \"despesa 1\",\n        \"value\": 3.33,\n        \"createdAt\": \"2001-01-01 01:01:01\",\n        \"updatedAt\": \"2020-06-16 18:07:55\",\n        \"createdBy\": 3\n    },",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -425,7 +425,7 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:8282/api/v1/user/2",
+							"raw": "localhost:8282/api/v1/income/3",
 							"host": [
 								"localhost"
 							],
@@ -433,8 +433,8 @@
 							"path": [
 								"api",
 								"v1",
-								"user",
-								"2"
+								"income",
+								"3"
 							]
 						}
 					},
@@ -446,7 +446,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:8282/api/v1/user/",
+							"raw": "localhost:8282/api/v1/income/",
 							"host": [
 								"localhost"
 							],
@@ -454,7 +454,7 @@
 							"path": [
 								"api",
 								"v1",
-								"user",
+								"income",
 								""
 							]
 						}
@@ -467,7 +467,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:8282/api/v1/user/1",
+							"raw": "localhost:8282/api/v1/income/4",
 							"host": [
 								"localhost"
 							],
@@ -475,8 +475,8 @@
 							"path": [
 								"api",
 								"v1",
-								"user",
-								"1"
+								"income",
+								"4"
 							]
 						}
 					},
@@ -488,7 +488,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "localhost:8282/api/v1/user/1",
+							"raw": "localhost:8282/api/v1/income/3",
 							"host": [
 								"localhost"
 							],
@@ -496,8 +496,8 @@
 							"path": [
 								"api",
 								"v1",
-								"user",
-								"1"
+								"income",
+								"3"
 							]
 						}
 					},
@@ -508,7 +508,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "3f7382c3-bed5-4c14-9cb5-9376707cefcb",
+						"id": "4f44c24d-e823-4e06-9dc0-841498d04e7a",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -518,7 +518,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "098cba14-f0ad-4fb8-ac83-b6973d16dc9a",
+						"id": "b37850ed-8af7-4b6a-851b-83817dc8b707",
 						"type": "text/javascript",
 						"exec": [
 							""

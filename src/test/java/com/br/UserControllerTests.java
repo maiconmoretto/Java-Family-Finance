@@ -29,32 +29,32 @@ public class UserControllerTests {
 
 	@Test
 	public void save() throws Exception {
-		User expense = new User("Joao", "01-01-01 01:01:01", "joao@joao.com");
-		mvc.perform(MockMvcRequestBuilders.post("/api/v1/user/").content(asJsonString(expense))
+		User user = new User("Joao", "01-01-01 01:01:01", "joao@joao.com");
+		mvc.perform(MockMvcRequestBuilders.post("/api/v1/user/").content(asJsonString(user))
 				.contentType(MediaType.APPLICATION_JSON).accept(MediaType.APPLICATION_JSON));
 
 	}
 	
 	@Test
 	public void update() throws Exception {
-		User expense = new User();
-		mvc.perform(MockMvcRequestBuilders.put("/api/v1/user/").content(asJsonString(expense))
+		User user = new User();
+		mvc.perform(MockMvcRequestBuilders.put("/api/v1/user/").content(asJsonString(user))
 				.contentType(MediaType.APPLICATION_JSON).accept(MediaType.APPLICATION_JSON));
 
 	}
 	
 	@Test
 	public void delete() throws Exception {
-		User expense = new User();
-		mvc.perform(MockMvcRequestBuilders.delete("/api/v1/user/").content(asJsonString(expense))
+		User user = new User();
+		mvc.perform(MockMvcRequestBuilders.delete("/api/v1/user/").content(asJsonString(user))
 				.contentType(MediaType.APPLICATION_JSON).accept(MediaType.APPLICATION_JSON));
 
 	}
 	
 	@Test
 	public void findById() throws Exception {
-		User expense = new User();
-		mvc.perform(MockMvcRequestBuilders.get("/api/v1/user/").content(asJsonString(expense))
+		User user = new User();
+		mvc.perform(MockMvcRequestBuilders.get("/api/v1/user/").content(asJsonString(user))
 				.contentType(MediaType.APPLICATION_JSON).accept(MediaType.APPLICATION_JSON));
 
 	}

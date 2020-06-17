@@ -11,42 +11,42 @@ import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 
-import com.br.model.Expenses;
+import com.br.model.SharedFinance;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 @SpringBootTest
 @AutoConfigureMockMvc
-public class ExpensesControllerTests {
+public class SharedFinanceControllerTests {
 
 	@Autowired
 	private MockMvc mvc;
 
 	@Test
 	public void findAll() throws Exception {
-		mvc.perform(MockMvcRequestBuilders.get("/api/v1/expenses/").accept(MediaType.APPLICATION_JSON))
+		mvc.perform(MockMvcRequestBuilders.get("/api/v1/sharedFinance/").accept(MediaType.APPLICATION_JSON))
 				.andExpect(status().isOk());
 	}
 	
 	@Test
 	public void update() throws Exception {
-		Expenses expense = new Expenses();
-		mvc.perform(MockMvcRequestBuilders.put("/api/v1/expenses/").content(asJsonString(expense))
+		SharedFinance sharedFinance = new SharedFinance();
+		mvc.perform(MockMvcRequestBuilders.put("/api/v1/sharedFinance/").content(asJsonString(sharedFinance))
 				.contentType(MediaType.APPLICATION_JSON).accept(MediaType.APPLICATION_JSON));
 
 	}
 	
 	@Test
 	public void delete() throws Exception {
-		Expenses expense = new Expenses();
-		mvc.perform(MockMvcRequestBuilders.delete("/api/v1/expenses/").content(asJsonString(expense))
+		SharedFinance sharedFinance = new SharedFinance();
+		mvc.perform(MockMvcRequestBuilders.delete("/api/v1/sharedFinance/").content(asJsonString(sharedFinance))
 				.contentType(MediaType.APPLICATION_JSON).accept(MediaType.APPLICATION_JSON));
 
 	}
 	
 	@Test
 	public void findById() throws Exception {
-		Expenses expense = new Expenses();
-		mvc.perform(MockMvcRequestBuilders.get("/api/v1/expenses/").content(asJsonString(expense))
+		SharedFinance sharedFinance = new SharedFinance();
+		mvc.perform(MockMvcRequestBuilders.get("/api/v1/sharedFinance/").content(asJsonString(sharedFinance))
 				.contentType(MediaType.APPLICATION_JSON).accept(MediaType.APPLICATION_JSON));
 
 	}

@@ -694,6 +694,173 @@
 				}
 			],
 			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Shared Finance",
+			"item": [
+				{
+					"name": "ADD",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"description": "\n",
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n   \"userId\": 1,\n   \"sharedUserId\": 2,\n   \"accepted\": true\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8282/api/v1/sharedFinance/",
+							"host": [
+								"localhost"
+							],
+							"port": "8282",
+							"path": [
+								"api",
+								"v1",
+								"sharedFinance",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"description": "\n",
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n   \"id\": 3,\n   \"userId\": 2,\n   \"sharedUserId\": 1,\n   \"accepted\": true\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8282/api/v1/sharedFinance/3",
+							"host": [
+								"localhost"
+							],
+							"port": "8282",
+							"path": [
+								"api",
+								"v1",
+								"sharedFinance",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ALL",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8282/api/v1/sharedFinance/",
+							"host": [
+								"localhost"
+							],
+							"port": "8282",
+							"path": [
+								"api",
+								"v1",
+								"sharedFinance",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET BY ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8282/api/v1/sharedFinance/5",
+							"host": [
+								"localhost"
+							],
+							"port": "8282",
+							"path": [
+								"api",
+								"v1",
+								"sharedFinance",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8282/api/v1/sharedFinance/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8282",
+							"path": [
+								"api",
+								"v1",
+								"sharedFinance",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "f0775882-d0bb-4891-9ffe-6fe4c2c73cdb",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "33407ed0-89a5-4b14-89d3-7d3bb6ff7e08",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
 		}
 	],
 	"event": [

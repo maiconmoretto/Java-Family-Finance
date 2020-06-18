@@ -48,17 +48,10 @@ public class User implements Serializable {
 		this.email = email;
 	}
 
-	public String getCreatedAt() {
-		return createdAt;
-	}
 
-	public void setCreatedAt(String createdAt) {
-		this.createdAt = createdAt;
-	}
 
-	public User(String name, String createdAt, String email) {
+	public User(String name, String email) {
 		this.name = name;
-		this.createdAt = createdAt;
 		this.email = email;
 	}
 }

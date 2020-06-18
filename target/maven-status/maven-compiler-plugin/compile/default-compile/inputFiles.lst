@@ -13,6 +13,7 @@
 /home/maicon/Documents/projects/java/spirngbot/Java-Family-Finance/src/main/java/com/br/model/Income.java
 /home/maicon/Documents/projects/java/spirngbot/Java-Family-Finance/src/main/java/com/br/controller/ExpensesController.java
 /home/maicon/Documents/projects/java/spirngbot/Java-Family-Finance/src/main/java/com/br/controller/SharedFinanceController.java
+/home/maicon/Documents/projects/java/spirngbot/Java-Family-Finance/src/main/java/com/br/model/UserDTO.java
 /home/maicon/Documents/projects/java/spirngbot/Java-Family-Finance/src/main/java/com/br/repository/UserRepository.java
 /home/maicon/Documents/projects/java/spirngbot/Java-Family-Finance/src/main/java/com/br/controller/CategoryController.java
 /home/maicon/Documents/projects/java/spirngbot/Java-Family-Finance/src/main/java/com/br/repository/SharedFinanceRepository.java

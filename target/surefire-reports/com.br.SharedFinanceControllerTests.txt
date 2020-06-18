@@ -1,4 +1,64 @@
 -------------------------------------------------------------------------------
 Test set: com.br.SharedFinanceControllerTests
 -------------------------------------------------------------------------------
-Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.766 s - in com.br.SharedFinanceControllerTests
+Tests run: 4, Failures: 0, Errors: 4, Skipped: 0, Time elapsed: 8.656 s <<< FAILURE! - in com.br.SharedFinanceControllerTests
+delete  Time elapsed: 0.013 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.springframework.beans.factory.BeanCreationException: 
+Error creating bean with name 'userController' defined in file [/home/maicon/Documents/projects/java/spirngbot/Java-Family-Finance/target/classes/com/br/controller/UserController.class]: Bean instantiation via constructor failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.br.controller.UserController]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problem: 
+	RequestMapping cannot be resolved to a type
+
+Caused by: org.springframework.beans.BeanInstantiationException: 
+Failed to instantiate [com.br.controller.UserController]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problem: 
+	RequestMapping cannot be resolved to a type
+
+Caused by: java.lang.Error: 
+Unresolved compilation problem: 
+	RequestMapping cannot be resolved to a type
+
+
+findAll  Time elapsed: 0.001 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.springframework.beans.factory.BeanCreationException: 
+Error creating bean with name 'userController' defined in file [/home/maicon/Documents/projects/java/spirngbot/Java-Family-Finance/target/classes/com/br/controller/UserController.class]: Bean instantiation via constructor failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.br.controller.UserController]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problem: 
+	RequestMapping cannot be resolved to a type
+
+Caused by: org.springframework.beans.BeanInstantiationException: 
+Failed to instantiate [com.br.controller.UserController]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problem: 
+	RequestMapping cannot be resolved to a type
+
+Caused by: java.lang.Error: 
+Unresolved compilation problem: 
+	RequestMapping cannot be resolved to a type
+
+
+update  Time elapsed: 0 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.springframework.beans.factory.BeanCreationException: 
+Error creating bean with name 'userController' defined in file [/home/maicon/Documents/projects/java/spirngbot/Java-Family-Finance/target/classes/com/br/controller/UserController.class]: Bean instantiation via constructor failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.br.controller.UserController]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problem: 
+	RequestMapping cannot be resolved to a type
+
+Caused by: org.springframework.beans.BeanInstantiationException: 
+Failed to instantiate [com.br.controller.UserController]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problem: 
+	RequestMapping cannot be resolved to a type
+
+Caused by: java.lang.Error: 
+Unresolved compilation problem: 
+	RequestMapping cannot be resolved to a type
+
+
+findById  Time elapsed: 0 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.springframework.beans.factory.BeanCreationException: 
+Error creating bean with name 'userController' defined in file [/home/maicon/Documents/projects/java/spirngbot/Java-Family-Finance/target/classes/com/br/controller/UserController.class]: Bean instantiation via constructor failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.br.controller.UserController]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problem: 
+	RequestMapping cannot be resolved to a type
+
+Caused by: org.springframework.beans.BeanInstantiationException: 
+Failed to instantiate [com.br.controller.UserController]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problem: 
+	RequestMapping cannot be resolved to a type
+
+Caused by: java.lang.Error: 
+Unresolved compilation problem: 
+	RequestMapping cannot be resolved to a type
+
+

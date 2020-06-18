@@ -2,6 +2,7 @@
 package com.br.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,8 +22,12 @@ import io.swagger.annotations.ApiOperation;
 @RestController
 @Api(value = "API User")
 public class UserController {
+	private final UserService service;
+
 	@Autowired
-	private UserService service;
+	public UserController(UserService service) {
+		this.service = service;
+	}
 
 	@ApiOperation(value = "It will return list of User")
 	@GetMapping(path = "/api/v1/user/")
@@ -38,20 +43,23 @@ public class UserController {
 
 	@ApiOperation(value = "It will add new User")
 	@PostMapping(path = "/api/v1/user/")
-	public @ResponseBody ResponseEntity save(@RequestBody User expense) {
-		return service.save(expense);
+	public ResponseEntity<User> save(@RequestBody User user) {
+//		User userSaved = service.save(user);
+		return new ResponseEntity<>( service.save(user), HttpStatus.CREATED);
 	}
 
 	@ApiOperation(value = "It will update User")
 	@PutMapping(value = "/api/v1/user/{id}")
-	public ResponseEntity<String> update(@RequestBody User expense) {
-		return service.update(expense);
+	public ResponseEntity<User> update(@RequestBody User user) {
+		User userSaved = service.update(user);
+		return new ResponseEntity<>(userSaved, HttpStatus.CREATED);
 	}
 
 	@ApiOperation(value = "It will delete User")
 	@DeleteMapping(path = "/api/v1/user/{id}")
 	public ResponseEntity<String> deleteById(@PathVariable int id) {
-		return service.deleteById(id);
+		 service.deleteById(id);
+		 return new ResponseEntity<>("User deleted", HttpStatus.OK);
 	}
 
 }

@@ -8,3 +8,13 @@
  
 <p><b>theres a file with mysql create schema and tables:
 <b> scripts sql/script_create_database_and_tables.sql
+
+<br><br>
+<p>java --version:
+<p>openjdk 11.0.7 2020-04-14
+<p>OpenJDK Runtime Environment (build 11.0.7+10-post-Ubuntu-2ubuntu218.04)
+<p>OpenJDK 64-Bit Server VM (build 11.0.7+10-post-Ubuntu-2ubuntu218.04, mixed mode)
+<p>docker --version
+<p>Docker version 19.03.11, build dd360c7
+<p>linux verson:
+<p>Linux maicon-X450LD 4.15.0-54-generic #58-Ubuntu SMP Mon Jun 24 10:55:24 UTC 2019 x86_64 x86_64 x86_64 GNU/Linux

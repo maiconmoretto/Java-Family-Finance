@@ -9,7 +9,7 @@
 <p><b>theres a file with mysql create schema and tables:
 <b> scripts sql/script_create_database_and_tables.sql
 
-<br><br>
+<br>
 <p>java --version:
 <p>openjdk 11.0.7 2020-04-14
 <p>OpenJDK Runtime Environment (build 11.0.7+10-post-Ubuntu-2ubuntu218.04)

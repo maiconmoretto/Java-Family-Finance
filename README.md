@@ -9,6 +9,9 @@
 <p><b>theres a file with mysql create schema and tables:</b>
 <b> scripts sql/script_create_database_and_tables.sql</b>
 
+<br><p>Documentation Swagger:
+<p>http://localhost:8080/swagger-ui.html
+
 <br>
 <p>java --version:
 <p>openjdk 11.0.7 2020-04-14

@@ -46,14 +46,14 @@ public class SharedFinanceRepositoryTest {
 
 	@Test
 	public void deleteById() {
-		SharedFinance sharedFinance = new SharedFinance(1, 1, "01-01-01 01:01:01", true);
+		SharedFinance sharedFinance = new SharedFinance(1, 1, true);
 		repository.deleteById(sharedFinance.getId());
 		verify(repository, times(1)).deleteById(sharedFinance.getId());
 	}
 
 	@Test
 	public void save() {
-		SharedFinance sharedFinance = new SharedFinance(1, 1, "01-01-01 01:01:01", true);
+		SharedFinance sharedFinance = new SharedFinance(1, 1, true);
 		when(repository.save(sharedFinance)).thenReturn(sharedFinance);
 		SharedFinance result = repository.save(sharedFinance);
 		assertEquals(1, result.getUserId());
@@ -64,7 +64,7 @@ public class SharedFinanceRepositoryTest {
 
 	@Test
 	public void update() {
-		SharedFinance sharedFinance = new SharedFinance(1, 1, "01-01-01 01:01:01", true);
+		SharedFinance sharedFinance = new SharedFinance(1, 1,  true);
 		when(repository.save(sharedFinance)).thenReturn(sharedFinance);
 		SharedFinance result = repository.save(sharedFinance);
 		assertEquals(1, result.getUserId());
@@ -75,7 +75,7 @@ public class SharedFinanceRepositoryTest {
 
 	@Test
 	public void findById() {
-		Optional<SharedFinance> sharedFinance = Optional.of(new SharedFinance(1, 1, "01-01-01 01:01:01", true));
+		Optional<SharedFinance> sharedFinance = Optional.of(new SharedFinance(1, 1, true));
 		when(repository.findById(1)).thenReturn(sharedFinance);
 		Optional<SharedFinance> result = repository.findById(1);
 		assertEquals(1, result.get().getUserId());

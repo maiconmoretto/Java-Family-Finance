@@ -1,45 +1,18 @@
 package com.br.model;
 
-import java.io.Serializable;
-
 import javax.persistence.Column;
-import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.Table;
 
-@Entity
-@Table(name = "shared_finances")
-public class SharedFinance implements Serializable {
+public class SharedFinanceDTO {
 
-	@Id
-	@Column(name = "id")
-	int id;
 	@Column(name = "user_id")
 	int userId;
 	@Column(name = "shared_user_id")
 	int sharedUserId;
-	@Column(name = "created_at")
-	String createdAt;
 	@Column(name = "accepted")
 	boolean accepted;
 
-	public SharedFinance() {
-	}
-
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
-
-	public String getCreatedAt() {
-		return createdAt;
-	}
-
-	public void setCreatedAt(String createdAt) {
-		this.createdAt = createdAt;
+	public SharedFinanceDTO() {
 	}
 
 	public int getUserId() {
@@ -66,9 +39,13 @@ public class SharedFinance implements Serializable {
 		this.accepted = accepted;
 	}
 
-	public SharedFinance(int userId, int sharedUserId, boolean accepted) {
+	public SharedFinanceDTO(int userId, int sharedUserId, boolean accepted) {
 		this.userId = userId;
 		this.sharedUserId = sharedUserId;
 		this.accepted = accepted;
+	}
+	
+	public SharedFinance changeToObject(){
+	    return new SharedFinance(userId, sharedUserId, accepted);
 	}
 }

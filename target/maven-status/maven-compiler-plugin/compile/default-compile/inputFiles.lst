@@ -9,6 +9,7 @@
 /home/maicon/Documents/projects/java/spirngbot/Java-Family-Finance/src/main/java/com/br/controller/CategoryController.java
 /home/maicon/Documents/projects/java/spirngbot/Java-Family-Finance/src/main/java/com/br/controller/IncomeController.java
 /home/maicon/Documents/projects/java/spirngbot/Java-Family-Finance/src/main/java/com/br/model/CategoryDTO.java
+/home/maicon/Documents/projects/java/spirngbot/Java-Family-Finance/src/main/java/com/br/model/SharedFinanceDTO.java
 /home/maicon/Documents/projects/java/spirngbot/Java-Family-Finance/src/main/java/com/br/service/SharedFinanceService.java
 /home/maicon/Documents/projects/java/spirngbot/Java-Family-Finance/src/main/java/com/br/controller/UserController.java
 /home/maicon/Documents/projects/java/spirngbot/Java-Family-Finance/src/main/java/com/br/service/CategoryService.java

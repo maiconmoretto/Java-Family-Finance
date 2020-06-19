@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.br.SharedFinanceControllerTests
 -------------------------------------------------------------------------------
-Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.524 s - in com.br.SharedFinanceControllerTests
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.008 s - in com.br.SharedFinanceControllerTests

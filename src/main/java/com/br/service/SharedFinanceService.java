@@ -1,10 +1,6 @@
 package com.br.service;
 
-import java.util.Optional;
-
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import com.br.model.SharedFinance;
@@ -13,8 +9,16 @@ import com.br.repository.SharedFinanceRepository;
 @Service
 public class SharedFinanceService {
 	
+	private final SharedFinanceRepository repository;
+	
 	@Autowired
-	SharedFinanceRepository repository;
+	public SharedFinanceService(SharedFinanceRepository repository) {
+		this.repository = repository;
+	}
+
+	public SharedFinance save(SharedFinance sharedFinance) {
+		return repository.save(sharedFinance);
+	}
 
 	public Iterable<SharedFinance> findAll() {
 		return repository.findAll();
@@ -24,22 +28,11 @@ public class SharedFinanceService {
 		return repository.findById(id).get();
 	}	
 
-	public ResponseEntity<String> save(SharedFinance expense) {
-		repository.save(expense);
-		return new ResponseEntity<>("SharedFinance successfully registered", HttpStatus.CREATED);
+	public SharedFinance update(SharedFinance sharedFinance) {
+		return repository.save(sharedFinance);
 	}
 
-	public ResponseEntity<String> update(SharedFinance expense) {
-		Optional<SharedFinance> expenseExist = repository.findById(expense.getId());
-		if (!expenseExist.isPresent()) {
-			return new ResponseEntity<>("SharedFinance does not exist", HttpStatus.BAD_REQUEST);
-		}
-		repository.save(expense);
-		return new ResponseEntity<>("SharedFinance successfully updated", HttpStatus.OK);
-	}
-
-	public ResponseEntity<String> deleteById(int id) {
+	public void deleteById(int id) {
 		repository.deleteById(id);
-		return new ResponseEntity<>("SharedFinance successfully deleted", HttpStatus.OK);
 	}
 }

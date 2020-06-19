@@ -69,11 +69,11 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:8282/api/v1/expenses/4",
+							"raw": "localhost:8080/api/v1/expenses/4",
 							"host": [
 								"localhost"
 							],
-							"port": "8282",
+							"port": "8080",
 							"path": [
 								"api",
 								"v1",
@@ -90,11 +90,11 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:8282/api/v1/expenses/",
+							"raw": "localhost:8080/api/v1/expenses/",
 							"host": [
 								"localhost"
 							],
-							"port": "8282",
+							"port": "8080",
 							"path": [
 								"api",
 								"v1",
@@ -132,11 +132,11 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:8282/api/v1/expenses/findAllByIdUser/",
+							"raw": "localhost:8080/api/v1/expenses/findAllByIdUser/",
 							"host": [
 								"localhost"
 							],
-							"port": "8282",
+							"port": "8080",
 							"path": [
 								"api",
 								"v1",
@@ -212,7 +212,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n   \"name\": \"teste da silva\",\n   \"email\": \"teste@test\"\n}",
+							"raw": "{\n   \"name\": \"maria\",\n   \"email\": \"maria@maria\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -220,16 +220,15 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:8282/api/v1/user/",
+							"raw": "localhost:8080/api/v1/user",
 							"host": [
 								"localhost"
 							],
-							"port": "8282",
+							"port": "8080",
 							"path": [
 								"api",
 								"v1",
-								"user",
-								""
+								"user"
 							]
 						}
 					},
@@ -250,7 +249,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n   \"id\": 2,\n   \"name\": \"teste da silva santos\",\n   \"email\": \"teste@test\"\n}",
+							"raw": "{\n   \"id\": 2,\n   \"name\": \"teste da silva santos 2\",\n   \"email\": \"teste@test\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -258,11 +257,11 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:8282/api/v1/user/2",
+							"raw": "localhost:8080/api/v1/user/2",
 							"host": [
 								"localhost"
 							],
-							"port": "8282",
+							"port": "8080",
 							"path": [
 								"api",
 								"v1",
@@ -279,11 +278,11 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:8282/api/v1/user/",
+							"raw": "localhost:8080/api/v1/user/",
 							"host": [
 								"localhost"
 							],
-							"port": "8282",
+							"port": "8080",
 							"path": [
 								"api",
 								"v1",
@@ -300,11 +299,11 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:8282/api/v1/user/1",
+							"raw": "localhost:8080/api/v1/user/1",
 							"host": [
 								"localhost"
 							],
-							"port": "8282",
+							"port": "8080",
 							"path": [
 								"api",
 								"v1",
@@ -321,11 +320,11 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "localhost:8282/api/v1/user/1",
+							"raw": "localhost:8080/api/v1/user/1",
 							"host": [
 								"localhost"
 							],
-							"port": "8282",
+							"port": "8080",
 							"path": [
 								"api",
 								"v1",
@@ -379,7 +378,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "    {\n        \"description\": \"despesa 1\",\n        \"value\": 3.33,\n        \"createdAt\": \"2001-01-01 01:01:01\",\n        \"updatedAt\": \"2020-06-16 18:07:55\",\n        \"createdBy\": 3\n    },",
+							"raw": "    {\n        \"description\": \"receita 1\",\n        \"value\": 3.33,\n        \"createdBy\": 21\n    },",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -387,11 +386,11 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:8282/api/v1/income/",
+							"raw": "localhost:8080/api/v1/income/",
 							"host": [
 								"localhost"
 							],
-							"port": "8282",
+							"port": "8080",
 							"path": [
 								"api",
 								"v1",
@@ -425,11 +424,11 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:8282/api/v1/income/3",
+							"raw": "localhost:8080/api/v1/income/3",
 							"host": [
 								"localhost"
 							],
-							"port": "8282",
+							"port": "8080",
 							"path": [
 								"api",
 								"v1",
@@ -446,11 +445,11 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:8282/api/v1/income/",
+							"raw": "localhost:8080/api/v1/income/",
 							"host": [
 								"localhost"
 							],
-							"port": "8282",
+							"port": "8080",
 							"path": [
 								"api",
 								"v1",
@@ -467,11 +466,11 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:8282/api/v1/income/4",
+							"raw": "localhost:8080/api/v1/income/4",
 							"host": [
 								"localhost"
 							],
-							"port": "8282",
+							"port": "8080",
 							"path": [
 								"api",
 								"v1",
@@ -488,11 +487,11 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "localhost:8282/api/v1/income/3",
+							"raw": "localhost:8080/api/v1/income/3",
 							"host": [
 								"localhost"
 							],
-							"port": "8282",
+							"port": "8080",
 							"path": [
 								"api",
 								"v1",
@@ -554,11 +553,11 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:8282/api/v1/category/",
+							"raw": "localhost:8080/api/v1/category/",
 							"host": [
 								"localhost"
 							],
-							"port": "8282",
+							"port": "8080",
 							"path": [
 								"api",
 								"v1",
@@ -592,11 +591,11 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:8282/api/v1/category/5",
+							"raw": "localhost:8080/api/v1/category/5",
 							"host": [
 								"localhost"
 							],
-							"port": "8282",
+							"port": "8080",
 							"path": [
 								"api",
 								"v1",
@@ -613,11 +612,11 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:8282/api/v1/category/",
+							"raw": "localhost:8080/api/v1/category/",
 							"host": [
 								"localhost"
 							],
-							"port": "8282",
+							"port": "8080",
 							"path": [
 								"api",
 								"v1",
@@ -634,11 +633,11 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:8282/api/v1/category/5",
+							"raw": "localhost:8080/api/v1/category/5",
 							"host": [
 								"localhost"
 							],
-							"port": "8282",
+							"port": "8080",
 							"path": [
 								"api",
 								"v1",
@@ -655,11 +654,11 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "localhost:8282/api/v1/category/1",
+							"raw": "localhost:8080/api/v1/category/1",
 							"host": [
 								"localhost"
 							],
-							"port": "8282",
+							"port": "8080",
 							"path": [
 								"api",
 								"v1",
@@ -721,11 +720,11 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:8282/api/v1/sharedFinance/",
+							"raw": "localhost:8080/api/v1/sharedFinance/",
 							"host": [
 								"localhost"
 							],
-							"port": "8282",
+							"port": "8080",
 							"path": [
 								"api",
 								"v1",
@@ -759,11 +758,11 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:8282/api/v1/sharedFinance/3",
+							"raw": "localhost:8080/api/v1/sharedFinance/3",
 							"host": [
 								"localhost"
 							],
-							"port": "8282",
+							"port": "8080",
 							"path": [
 								"api",
 								"v1",
@@ -780,11 +779,11 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:8282/api/v1/sharedFinance/",
+							"raw": "localhost:8080/api/v1/sharedFinance/",
 							"host": [
 								"localhost"
 							],
-							"port": "8282",
+							"port": "8080",
 							"path": [
 								"api",
 								"v1",
@@ -801,11 +800,11 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:8282/api/v1/sharedFinance/5",
+							"raw": "localhost:8080/api/v1/sharedFinance/5",
 							"host": [
 								"localhost"
 							],
-							"port": "8282",
+							"port": "8080",
 							"path": [
 								"api",
 								"v1",
@@ -822,11 +821,11 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "localhost:8282/api/v1/sharedFinance/1",
+							"raw": "localhost:8080/api/v1/sharedFinance/1",
 							"host": [
 								"localhost"
 							],
-							"port": "8282",
+							"port": "8080",
 							"path": [
 								"api",
 								"v1",

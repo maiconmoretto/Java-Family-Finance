@@ -53,7 +53,7 @@ public class SharedFinanceRepositoryTest {
 
 	@Test
 	public void save() {
-		SharedFinance sharedFinance = new SharedFinance(3, 4, "01-01-01 01:01:01", true);
+		SharedFinance sharedFinance = new SharedFinance(1, 1, "01-01-01 01:01:01", true);
 		when(repository.save(sharedFinance)).thenReturn(sharedFinance);
 		SharedFinance result = repository.save(sharedFinance);
 		assertEquals(1, result.getUserId());

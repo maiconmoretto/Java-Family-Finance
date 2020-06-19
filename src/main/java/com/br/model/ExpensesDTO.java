@@ -1,23 +1,12 @@
 package com.br.model;
 
-import java.io.Serializable;
-
 import javax.persistence.Column;
-import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.Table;
 
-@Entity
-@Table(name = "expenses")
-public class Expenses implements Serializable {
-  
-	@Id
-	@Column(name = "id")
-	int id;
+public class ExpensesDTO {
+
 	@Column(name = "description")
 	String description;
-	@Column(name = "created_at")
-	String createdAt;
 	@Column(name = "created_by")
 	int createdBy;
 	@Column(name = "value")
@@ -25,15 +14,7 @@ public class Expenses implements Serializable {
 	@Column(name = "category_id")
 	int categoryId;
 
-	public Expenses() {
-	}
-
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
+	public ExpensesDTO() {
 	}
 
 	public String getDescription() {
@@ -42,14 +23,6 @@ public class Expenses implements Serializable {
 
 	public void setDescription(String description) {
 		this.description = description;
-	}
-
-	public String getCreatedAt() {
-		return createdAt;
-	}
-
-	public void setCreatedAt(String createdAt) {
-		this.createdAt = createdAt;
 	}
 
 	public int getCreatedBy() {
@@ -75,11 +48,15 @@ public class Expenses implements Serializable {
 	public void setCategoryId(int categoryId) {
 		this.categoryId = categoryId;
 	}
-	
-	public Expenses(String description, int categoryId, double value, int createdBy) {
-		  this.description = description;
-		  this.categoryId = categoryId;
-		  this.value = value;
-		  this.createdBy = createdBy;
-	    }
+
+	public ExpensesDTO(String description, int categoryId, double value, int createdBy) {
+		this.description = description;
+		this.categoryId = categoryId;
+		this.value = value;
+		this.createdBy = createdBy;
+	}
+
+	public Expenses changeToObject() {
+		return new Expenses(description, categoryId, value, createdBy);
+	}
 }

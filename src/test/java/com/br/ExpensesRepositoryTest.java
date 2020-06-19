@@ -39,7 +39,6 @@ public class ExpensesRepositoryTest {
 	@Test
 	public void findAll() {
 		expense = new Expenses();
-		expense.setCreatedAt("01-01-01 01:01:01");
 		expense.setDescription("description");
 		expense.setValue(3.33);
 		expense.setCreatedBy(1);
@@ -55,7 +54,6 @@ public class ExpensesRepositoryTest {
 	@Test
 	public void deleteById() {
 		expense = new Expenses();
-		expense.setCreatedAt("01-01-01 01:01:01");
 		expense.setDescription("description");
 		expense.setValue(3.33);
 		expense.setCreatedBy(1);
@@ -67,14 +65,12 @@ public class ExpensesRepositoryTest {
 	@Test
 	public void save() {
 		expense = new Expenses();
-		expense.setCreatedAt("01-01-01 01:01:01");
 		expense.setDescription("description");
 		expense.setValue(3.33);
 		expense.setCreatedBy(1);
 		when(repository.save(expense)).thenReturn(expense);
 		Expenses result = repository.save(expense);
 		assertEquals("description", result.getDescription());
-		assertEquals("01-01-01 01:01:01", result.getCreatedAt());
 		assertEquals(3.33, result.getValue(), 0.00);
 		assertEquals(1, result.getCreatedBy());
 	}
@@ -82,25 +78,22 @@ public class ExpensesRepositoryTest {
 	@Test
 	public void update() {
 		expense = new Expenses();
-		expense.setCreatedAt("01-01-01 01:01:01");
 		expense.setDescription("description");
 		expense.setValue(3.33);
 		expense.setCreatedBy(1);
 		when(repository.save(expense)).thenReturn(expense);
 		Expenses result = repository.save(expense);
 		assertEquals("description", result.getDescription());
-		assertEquals("01-01-01 01:01:01", result.getCreatedAt());
 		assertEquals(3.33, result.getValue(), 0.0);
 		assertEquals(1, result.getCreatedBy());
 	}
 
 	@Test
 	public void findById() {
-		Optional<Expenses> agenda = Optional.of(new Expenses("description", "01-01-01 01:01:01", 1, 3.33, 1));
+		Optional<Expenses> agenda = Optional.of(new Expenses("description", 1, 3.33, 1));
 		when(repository.findById(1)).thenReturn(agenda);
 		Optional<Expenses> result = repository.findById(1);
 		assertEquals("description", result.get().getDescription());
-		assertEquals("01-01-01 01:01:01", result.get().getCreatedAt());
 		assertEquals(3.33, result.get().getValue(), 0.00);
 		assertEquals(1, result.get().getCreatedBy());
 		;

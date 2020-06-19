@@ -1,19 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.br.TestingApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.646 s <<< FAILURE! - in com.br.TestingApplicationTests
-contextLoads  Time elapsed: 0 s  <<< ERROR!
-java.lang.IllegalStateException: Failed to load ApplicationContext
-Caused by: org.springframework.beans.factory.BeanCreationException: 
-Error creating bean with name 'userController' defined in file [/home/maicon/Documents/projects/java/spirngbot/Java-Family-Finance/target/classes/com/br/controller/UserController.class]: Bean instantiation via constructor failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.br.controller.UserController]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problem: 
-	RequestMapping cannot be resolved to a type
-
-Caused by: org.springframework.beans.BeanInstantiationException: 
-Failed to instantiate [com.br.controller.UserController]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problem: 
-	RequestMapping cannot be resolved to a type
-
-Caused by: java.lang.Error: 
-Unresolved compilation problem: 
-	RequestMapping cannot be resolved to a type
-
-
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.153 s - in com.br.TestingApplicationTests

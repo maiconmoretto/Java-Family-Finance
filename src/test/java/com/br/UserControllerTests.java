@@ -29,7 +29,7 @@ public class UserControllerTests {
 
 	@Test
 	public void save() throws Exception {
-		User user = new User("Joao", "01-01-01 01:01:01", "joao@joao.com");
+		User user = new User("Joao", "joao@joao.com");
 		mvc.perform(MockMvcRequestBuilders.post("/api/v1/user/").content(asJsonString(user))
 				.contentType(MediaType.APPLICATION_JSON).accept(MediaType.APPLICATION_JSON));
 

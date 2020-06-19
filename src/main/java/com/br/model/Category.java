@@ -76,9 +76,8 @@ public class Category implements Serializable {
 		this.updatedAt = updatedAt;
 	}
 
-	public Category(String description, String createdAt, int updatedBy, int createdBy) {
+	public Category(String description, int updatedBy, int createdBy) {
 		this.description = description;
-		this.createdAt = createdAt;
 		this.createdBy = createdBy;
 		this.updatedBy = updatedBy;
 	}

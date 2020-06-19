@@ -43,14 +43,6 @@ public class UserController {
 	public User findById(@PathVariable int id) {
 		return service.findById(id);
 	}
-//
-//	@ApiOperation(value = "It will add new User")
-//	@PostMapping(path = "/api/v1/user/")
-//	public ResponseEntity<User> save(@RequestBody User user) {
-//		User userSaved = service.save(user);
-//		return new ResponseEntity<>( service.save(user), HttpStatus.CREATED);
-//	}
-//	
 	
 	@ApiOperation(value = "It will add new User")
 	@PostMapping

@@ -50,39 +50,36 @@ public class UserRepositoryTest {
 
 	@Test
 	public void deleteById() {
-		User user = new User("Joao", "01-01-01 01:01:01", "joao@joao.com");
+		User user = new User("Joao", "joao@joao.com");
 		repository.deleteById(user.getId());
 		verify(repository, times(1)).deleteById(user.getId());
 	}
 
 	@Test
 	public void save() {
-		User user = new User("Joao", "01-01-01 01:01:01", "joao@joao.com");
+		User user = new User("Joao", "joao@joao.com");
 		when(repository.save(user)).thenReturn(user);
 		User result = repository.save(user);
 		assertEquals("Joao", result.getName());
 		assertEquals("joao@joao.com", result.getEmail());
-		assertEquals("01-01-01 01:01:01", result.getCreatedAt());
 	}
 
 	@Test
 	public void update() {
-		User user = new User("Joao", "01-01-01 01:01:01", "joao@joao.com");
+		User user = new User("Joao", "joao@joao.com");
 		when(repository.save(user)).thenReturn(user);
 		User result = repository.save(user);
 		assertEquals("Joao", result.getName());
 		assertEquals("joao@joao.com", result.getEmail());
-		assertEquals("01-01-01 01:01:01", result.getCreatedAt());
 	}
 
 	@Test
 	public void findById() {
-		Optional<User> user = Optional.of(new User("Joao", "01-01-01 01:01:01", "joao@joao.com"));
+		Optional<User> user = Optional.of(new User("Joao", "joao@joao.com"));
 		when(repository.findById(1)).thenReturn(user);
 		Optional<User> result = repository.findById(1);
 		assertEquals("Joao", result.get().getName());
 		assertEquals("joao@joao.com", result.get().getEmail());
-		assertEquals("01-01-01 01:01:01", result.get().getCreatedAt());		
 	}
 
 }

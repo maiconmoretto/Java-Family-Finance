@@ -29,7 +29,7 @@ public class CategoryControllerTests {
 
 	@Test
 	public void save() throws Exception {
-		Category category = new Category("description", "01-01-01 01:01:01", 1, 1);
+		Category category = new Category("description", 1, 1);
 		mvc.perform(MockMvcRequestBuilders.post("/api/v1/category/").content(asJsonString(category)));
 
 	}

@@ -50,40 +50,37 @@ public class IncomeRepositoryTest {
 
 	@Test
 	public void deleteById() {
-		Income income = new Income("Description", "01-01-01 01:01:01", 1 , 3.33);
+		Income income = new Income("Description",  1 , 3.33);
 		repository.deleteById(income.getId());
 		verify(repository, times(1)).deleteById(income.getId());
 	}
 
 	@Test
 	public void save() {
-		Income income = new Income("Description", "01-01-01 01:01:01", 1 , 3.33);
+		Income income = new Income("Description",  1 , 3.33);
 		when(repository.save(income)).thenReturn(income);
 		Income result = repository.save(income);
 		assertEquals("Description", result.getDescription());
-		assertEquals("01-01-01 01:01:01", result.getCreatedAt());
 		assertEquals(3.33, result.getValue(), 0.00);
 		assertEquals(1, result.getUpdatedAt());
 	}
 
 	@Test
 	public void update() {
-		Income income = new Income("Description", "01-01-01 01:01:01", 1 , 3.33);
+		Income income = new Income("Description",  1 , 3.33);
 		when(repository.save(income)).thenReturn(income);
 		Income result = repository.save(income);
 		assertEquals("Description", result.getDescription());
-		assertEquals("01-01-01 01:01:01", result.getCreatedAt());
 		assertEquals(3.33, result.getValue(), 0.00);
 		assertEquals(1, result.getUpdatedAt());
 	}
 
 	@Test
 	public void findById() {
-		Optional<Income> income = Optional.of(new Income("Description", "01-01-01 01:01:01", 1 , 3.33));
+		Optional<Income> income = Optional.of(new Income("Description",  1 , 3.33));
 		when(repository.findById(1)).thenReturn(income);
 		Optional<Income> result = repository.findById(1);
 		assertEquals("Description", result.get().getDescription());
-		assertEquals("01-01-01 01:01:01", result.get().getCreatedAt());
 		assertEquals(3.33, result.get().getValue(), 0.00);
 		assertEquals(1, result.get().getUpdatedAt());
 	}

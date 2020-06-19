@@ -76,9 +76,8 @@ public class Income implements Serializable {
 		this.createdAt = createdAt;
 	}
 
-	public Income(String description, String createdAt, int createdBy, double value) {
+	public Income(String description, int createdBy, double value) {
 		this.description = description;
-		this.createdAt = createdAt;
 		this.createdBy = createdBy;
 		this.value = value;
 	}

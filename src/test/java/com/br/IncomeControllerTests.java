@@ -29,7 +29,7 @@ public class IncomeControllerTests {
 
 	@Test
 	public void save() throws Exception {
-		Income income = new Income("despesa", "01-01-01 01:01:01", 3, 3.33);
+		Income income = new Income("despesa", 3, 3.33);
 		mvc.perform(MockMvcRequestBuilders.post("/api/v1/income/").content(asJsonString(income))
 				.contentType(MediaType.APPLICATION_JSON).accept(MediaType.APPLICATION_JSON));
 

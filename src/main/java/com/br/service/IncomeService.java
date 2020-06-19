@@ -1,11 +1,6 @@
 package com.br.service;
 
-import java.util.List;
-import java.util.Optional;
-
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import com.br.model.Income;
@@ -14,8 +9,16 @@ import com.br.repository.IncomeRepository;
 @Service
 public class IncomeService {
 	
+	private final IncomeRepository repository;
+	
 	@Autowired
-	IncomeRepository repository;
+	public IncomeService(IncomeRepository repository) {
+		this.repository = repository;
+	}
+
+	public Income save(Income income) {
+		return repository.save(income);
+	}
 
 	public Iterable<Income> findAll() {
 		return repository.findAll();
@@ -25,22 +28,11 @@ public class IncomeService {
 		return repository.findById(id).get();
 	}	
 
-	public ResponseEntity<String> save(Income expense) {
-		repository.save(expense);
-		return new ResponseEntity<>("Income successfully registered", HttpStatus.CREATED);
+	public Income update(Income income) {
+		return repository.save(income);
 	}
 
-	public ResponseEntity<String> update(Income expense) {
-		Optional<Income> expenseExist = repository.findById(expense.getId());
-		if (!expenseExist.isPresent()) {
-			return new ResponseEntity<>("Income does not exist", HttpStatus.BAD_REQUEST);
-		}
-		repository.save(expense);
-		return new ResponseEntity<>("Income successfully updated", HttpStatus.OK);
-	}
-
-	public ResponseEntity<String> deleteById(int id) {
+	public void deleteById(int id) {
 		repository.deleteById(id);
-		return new ResponseEntity<>("Income successfully deleted", HttpStatus.OK);
 	}
 }

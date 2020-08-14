@@ -5,9 +5,13 @@
 <p><b>  java -jar target/familyfinance-0.0.1-SNAPSHOT.jar</b>
 <p> or 
 <p><b> mvn spring-boot:run </b>
+<p> or run in a container
+<p><b> docker run -d --name=family-finance -p 8080:8080 --link mysql:mysql  family-finance:0.0.1 </b>
  
 <p><b>theres a file with mysql create schema and tables:</b>
 <b> scripts sql/script_create_database_and_tables.sql</b>
+<b>or run the database in a container
+<p><b>docker run --name mysql -e MYSQL_USER=family_finance -e MYSQL_DATABASE=family_finance -e   MYSQL_ROOT_PASSWORD=family_finance -d -p 3306:3306 mysql:5.6</>
 <p><b>Documentation Swagger:
 <p>http://localhost:8080/swagger-ui.html</b>
 

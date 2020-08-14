@@ -2,7 +2,6 @@
 <p>App to control family finances whit the focus on familiar habitat  The main objective of the Family Finance application is to provide control over expenses, mainly aiming at a shared environment among people who live together daily, such as a family. <p>To do so, the application focuses on sharing records, history, and categorizations of expenses incurred in a familiar, everyday living environment.
 
 <p><b>to run this project with docker, in the root folder type it:</b>
-<p> in root folder type
 <p><b> docker build -t  family-finance:0.0.1 . </b>
 <p>then
 <p><b> docker run -d --name=family-finance -p 8080:8080 --link mysql:mysql  family-finance:0.0.1 </b>

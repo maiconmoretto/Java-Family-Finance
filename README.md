@@ -5,7 +5,7 @@
 <p><b> docker build -t  family-finance:0.0.1 . </b>
 <p>then
 <p><b> docker run -d --name=family-finance -p 8080:8080 --link mysql:mysql  family-finance:0.0.1 </b>
-<b>at last run the database in a container
+<p>at last run the database in a container
 <p><b>docker run --name mysql -e MYSQL_USER=family_finance -e MYSQL_DATABASE=family_finance -e   MYSQL_ROOT_PASSWORD=family_finance -d -p 3306:3306 mysql:5.6</b>
 
 

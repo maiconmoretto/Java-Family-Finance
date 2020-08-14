@@ -6,9 +6,9 @@
 <p>then
 <p><b> docker run -d --name=family-finance -p 8080:8080 --link mysql:mysql  family-finance:0.0.1 </b>
 <p>at last run the database in a container
-<p><b>docker run --name mysql -e MYSQL_USER=family_finance -e MYSQL_DATABASE=family_finance -e   MYSQL_ROOT_PASSWORD=family_finance -d -p 3306:3306 mysql:5.6</b>
+<p><b>docker run --name mysql -e MYSQL_USER=family_finance -e MYSQL_DATABASE=family_finance -e   MYSQL_ROOT_PASSWORD=family_finance -d -p 3306:3306 mysql:5.6 </b>
 
-
+<br><br>
 
 <p><b>to run this project without docker, in the root folder type it:</b>
 <p><b>  java -jar target/familyfinance-0.0.1-SNAPSHOT.jar</b>

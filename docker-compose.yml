@@ -1,4 +1,5 @@
-version: '3'
+version: '3.1'
+
 services:
   docker-mysql:
     restart: always
@@ -10,18 +11,12 @@ services:
       MYSQL_ROOT_HOST: '%'
     volumes:
       - ./sql:/docker-entrypoint-initdb.d
-
     ports:
       - "6033:3306"
-    healthcheck:
-      test: "/usr/bin/mysql --user=root --password=root--execute \"SHOW DATABASES;\""
-      interval: 2s
-      timeout: 20s
-      retries: 10
 
   book-manager-app:
     restart: on-failure
-    build: ./
+    build: ./finance/
     expose:
       - "10222"
     ports:
@@ -30,3 +25,22 @@ services:
       WAIT_HOSTS: mysql:3306
     depends_on:
       - docker-mysql
+
+
+  user:
+    build: ./user/
+    restart: always
+    ports:
+      - 8182:8080
+    depends_on:
+      - mongo
+
+  mongo:
+    image: mongo
+    container_name: springboot-mongo
+    ports:  # for demo/debug purpose only
+      - 27018:27017
+    volumes:
+      - $HOME/data/springboot-mongo-data:/data/db
+      - $HOME/data/springboot-mongo-bkp:/data/bkp
+    restart: always

@@ -14,7 +14,21 @@ services:
     ports:
       - "6033:3306"
 
-  book-manager-app:
+  docker-mysql-user:
+    restart: always
+    container_name: docker-mysql-user
+    image: mysql
+    environment:
+      MYSQL_DATABASE: user
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_ROOT_HOST: '%'
+    volumes:
+      - ./sql:/docker-entrypoint-initdb.d
+    ports:
+      - "6034:3306"
+
+
+  finance:
     restart: on-failure
     build: ./finance/
     expose:
@@ -30,17 +44,9 @@ services:
   user:
     build: ./user/
     restart: always
+    expose:
+      - "8182"
     ports:
-      - 8182:8080
+      - 8182:8182
     depends_on:
-      - mongo
-
-  mongo:
-    image: mongo
-    container_name: springboot-mongo
-    ports:  # for demo/debug purpose only
-      - 27018:27017
-    volumes:
-      - $HOME/data/springboot-mongo-data:/data/db
-      - $HOME/data/springboot-mongo-bkp:/data/bkp
-    restart: always
+      - docker-mysql-user

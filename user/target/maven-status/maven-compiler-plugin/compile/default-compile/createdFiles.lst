@@ -1,0 +1,6 @@
+com/br/repository/UserRepository.class
+com/br/service/UserService.class
+com/br/model/UserDTO.class
+com/br/model/User.class
+com/br/controller/UserController.class
+com/br/Application.class

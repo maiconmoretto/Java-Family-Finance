@@ -1,0 +1,52 @@
+version: '3.1'
+
+services:
+  docker-mysql:
+    restart: always
+    container_name: docker-mysql
+    image: mysql
+    environment:
+      MYSQL_DATABASE: family_finance
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_ROOT_HOST: '%'
+    volumes:
+      - ./sql:/docker-entrypoint-initdb.d
+    ports:
+      - "6033:3306"
+
+  docker-mysql-user:
+    restart: always
+    container_name: docker-mysql-user
+    image: mysql
+    environment:
+      MYSQL_DATABASE: user
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_ROOT_HOST: '%'
+    volumes:
+      - ./sql:/docker-entrypoint-initdb.d
+    ports:
+      - "6034:3306"
+
+
+  finance:
+    restart: on-failure
+    build: ./finance/
+    expose:
+      - "10222"
+    ports:
+      - 10222:10222
+    environment:
+      WAIT_HOSTS: mysql:3306
+    depends_on:
+      - docker-mysql
+
+
+  user:
+    build: ./user/
+    restart: always
+    expose:
+      - "8182"
+    ports:
+      - 8182:8182
+    depends_on:
+      - docker-mysql-user

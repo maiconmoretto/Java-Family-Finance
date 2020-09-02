@@ -10,10 +10,12 @@ import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @EnableSwagger2
 @ComponentScan
 @SpringBootApplication
+@EnableFeignClients
 public class Application {
 
 	public static void main(String[] args) {

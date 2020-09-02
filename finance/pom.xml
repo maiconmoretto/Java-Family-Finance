@@ -15,14 +15,11 @@
 	<name>familyfinance</name>
 	<description>App to control family finances whit the focus on familiar habitat  The main objective of the Family Finance application is to provide control over expenses, mainly aiming at a shared environment among people who live together daily, such as a family. To do so, the application focuses on sharing records, history, and categorizations of expenses incurred in a familiar, everyday living environment.</description>
 
-
-
 	<properties>
 		<java.version>1.8</java.version>
 
 		<lombok.version>1.16.10</lombok.version>
 	</properties>
-
 
 	<dependencies>
 		<dependency>
@@ -66,6 +63,13 @@
 			<version>2.7.0</version>
 			<scope>compile</scope>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-openfeign -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-openfeign</artifactId>
+			<version>2.2.5.RELEASE</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>

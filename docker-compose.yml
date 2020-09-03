@@ -36,6 +36,7 @@ services:
     ports:
       - 10222:10222
     environment:
+      USER_SERVICE_URL: http://user:8182
       WAIT_HOSTS: mysql:3306
     depends_on:
       - docker-mysql

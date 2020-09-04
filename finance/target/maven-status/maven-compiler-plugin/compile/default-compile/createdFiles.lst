@@ -3,7 +3,9 @@ com/br/service/ExpensesService.class
 com/br/controller/ExpensesController.class
 com/br/service/IncomeService.class
 com/br/service/CategoryService.class
+com/br/model/UserDTO.class
 com/br/controller/CategoryController.class
+com/br/user/UserServiceClient.class
 com/br/model/IncomeDTO.class
 com/br/Application.class
 com/br/model/SharedFinanceDTO.class

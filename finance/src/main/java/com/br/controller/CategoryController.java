@@ -46,8 +46,8 @@ public class CategoryController {
 	
 	@ApiOperation(value = "It will add new Category")
 	@PostMapping
-	public ResponseEntity<Category> save(@RequestBody CategoryDTO dto) {
-	    Category category = service.save(dto.changeToObject());
+	public ResponseEntity<Category> save(@RequestBody CategoryDTO dto, int createdBy) {
+	    Category category = service.save(dto.changeToObject(), createdBy);
 	    return new ResponseEntity<>(category, HttpStatus.CREATED);
 	}
 

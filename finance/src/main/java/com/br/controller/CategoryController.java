@@ -22,7 +22,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 
 @RestController
-@Api(value = "API Category")
+@Api(value = "API Category.java")
 @RequestMapping("/api/v1/category/")
 public class CategoryController {
 	private final CategoryService service;
@@ -32,37 +32,37 @@ public class CategoryController {
 		this.service = service;
 	}
 
-	@ApiOperation(value = "It will return list of Category")
+	@ApiOperation(value = "It will return list of Category.java")
 	@GetMapping
 	public @ResponseBody Iterable<Category> getAllCategorys() {
 		return service.findAll();
 	}
 
-	@ApiOperation(value = "It will get a Category by Id")
+	@ApiOperation(value = "It will get a Category.java by Id")
 	@GetMapping("/{id}")
 	public Category findById(@PathVariable int id) {
 		return service.findById(id);
 	}
 	
-	@ApiOperation(value = "It will add new Category")
+	@ApiOperation(value = "It will add new Category.java")
 	@PostMapping
 	public ResponseEntity<Category> save(@RequestBody CategoryDTO dto, int createdBy) {
 	    Category category = service.save(dto.changeToObject(), createdBy);
 	    return new ResponseEntity<>(category, HttpStatus.CREATED);
 	}
 
-	@ApiOperation(value = "It will update Category")
+	@ApiOperation(value = "It will update Category.java")
 	@PutMapping(value = "/{id}")
 	public ResponseEntity<Category> update(@RequestBody Category category) {
 		Category categorySaved = service.update(category);
 		return new ResponseEntity<>(categorySaved, HttpStatus.CREATED);
 	}
 
-	@ApiOperation(value = "It will delete Category")
+	@ApiOperation(value = "It will delete Category.java")
 	@DeleteMapping(path = "/{id}")
 	public ResponseEntity<String> deleteById(@PathVariable int id) {
 		 service.deleteById(id);
-		 return new ResponseEntity<>("Category deleted", HttpStatus.OK);
+		 return new ResponseEntity<>("Category.java deleted", HttpStatus.OK);
 	}
 
 }

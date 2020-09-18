@@ -51,3 +51,31 @@ services:
       - 8182:8182
     depends_on:
       - docker-mysql-user
+
+
+
+  docker-mysql-category:
+    restart: always
+    container_name: docker-mysql-category
+    image: mysql
+    environment:
+      MYSQL_DATABASE: category
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_ROOT_HOST: '%'
+    volumes:
+      - ./sql:/docker-entrypoint-initdb.d
+    ports:
+      - "6035:3306"
+
+
+  category:
+    restart: on-failure
+    build: ./category/
+    expose:
+      - "10333"
+    ports:
+      - 10333:10333
+    environment:
+      WAIT_HOSTS: mysql:3306
+    depends_on:
+      - docker-mysql-category

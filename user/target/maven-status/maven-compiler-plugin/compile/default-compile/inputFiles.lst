@@ -1,6 +1,5 @@
 /home/maicon/Documents/projects/java/springboot/Java-Family-Finance/user/src/main/java/com/br/Application.java
 /home/maicon/Documents/projects/java/springboot/Java-Family-Finance/user/src/main/java/com/br/service/UserService.java
 /home/maicon/Documents/projects/java/springboot/Java-Family-Finance/user/src/main/java/com/br/repository/UserRepository.java
-/home/maicon/Documents/projects/java/springboot/Java-Family-Finance/user/src/main/java/com/br/model/User.java
+/home/maicon/Documents/projects/java/springboot/Java-Family-Finance/user/src/main/java/com/br/entity/User.java
 /home/maicon/Documents/projects/java/springboot/Java-Family-Finance/user/src/main/java/com/br/controller/UserController.java
-/home/maicon/Documents/projects/java/springboot/Java-Family-Finance/user/src/main/java/com/br/model/UserDTO.java

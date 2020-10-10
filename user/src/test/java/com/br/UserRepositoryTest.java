@@ -20,7 +20,7 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import com.br.model.User;
+import com.br.entity.User;
 import com.br.repository.UserRepository;
 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -50,14 +50,14 @@ public class UserRepositoryTest {
 
 	@Test
 	public void deleteById() {
-		User user = new User("Joao", "joao@joao.com");
+		User user = new User();
 		repository.deleteById(user.getId());
 		verify(repository, times(1)).deleteById(user.getId());
 	}
 
 	@Test
 	public void save() {
-		User user = new User("Joao", "joao@joao.com");
+		User user = new User();
 		when(repository.save(user)).thenReturn(user);
 		User result = repository.save(user);
 		assertEquals("Joao", result.getName());
@@ -66,7 +66,7 @@ public class UserRepositoryTest {
 
 	@Test
 	public void update() {
-		User user = new User("Joao", "joao@joao.com");
+		User user = new User();
 		when(repository.save(user)).thenReturn(user);
 		User result = repository.save(user);
 		assertEquals("Joao", result.getName());
@@ -75,7 +75,7 @@ public class UserRepositoryTest {
 
 	@Test
 	public void findById() {
-		Optional<User> user = Optional.of(new User("Joao", "joao@joao.com"));
+		Optional<User> user = Optional.of(new User());
 		when(repository.findById(1)).thenReturn(user);
 		Optional<User> result = repository.findById(1);
 		assertEquals("Joao", result.get().getName());

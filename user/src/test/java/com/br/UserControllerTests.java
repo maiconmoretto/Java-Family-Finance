@@ -11,7 +11,7 @@ import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 
-import com.br.model.User;
+import com.br.entity.User;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 @SpringBootTest
@@ -29,7 +29,7 @@ public class UserControllerTests {
 
 	@Test
 	public void save() throws Exception {
-		User user = new User("Joao", "joao@joao.com");
+		User user = new User();
 		mvc.perform(MockMvcRequestBuilders.post("/api/v1/user/").content(asJsonString(user))
 				.contentType(MediaType.APPLICATION_JSON).accept(MediaType.APPLICATION_JSON));
 

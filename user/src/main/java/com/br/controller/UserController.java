@@ -14,55 +14,47 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.br.model.User;
-import com.br.model.UserDTO;
-import com.br.service.UserService;
+import com.br.entity.User;
 
-import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiOperation;
+import com.br.repository.UserRepository;
+
+
+import java.util.List;
+import java.util.Optional;
 
 @RestController
-@Api(value = "API User")
-@RequestMapping("/api/v1/user/")
+@RequestMapping("user")
 public class UserController {
-	private final UserService service;
 
 	@Autowired
-	public UserController(UserService service) {
-		this.service = service;
-	}
+	private UserRepository userRepository;
 
-	@ApiOperation(value = "It will return list of User")
 	@GetMapping
-	public @ResponseBody Iterable<User> getAllUsers() {
-		return service.findAll();
+	public List<User> viewAllUsers() {
+		return userRepository.findAll();
 	}
 
-	@ApiOperation(value = "It will get a User by Id")
-	@GetMapping("/{id}")
-	public User findById(@PathVariable int id) {
-		return service.findById(id);
-	}
-	
-	@ApiOperation(value = "It will add new User")
 	@PostMapping
-	public ResponseEntity<User> save(@RequestBody UserDTO dto) {
-	    User user = service.save(dto.changeToObject());
-	    return new ResponseEntity<>(user, HttpStatus.CREATED);
+	public User createUser(@RequestBody User user) {
+		return userRepository.saveAndFlush(user);
 	}
 
-	@ApiOperation(value = "It will update User")
-	@PutMapping(value = "/{id}")
-	public ResponseEntity<User> update(@RequestBody User user) {
-		User userSaved = service.update(user);
-		return new ResponseEntity<>(userSaved, HttpStatus.CREATED);
+	@GetMapping("/{id}")
+	public User viewUser(@PathVariable Integer id) {
+		return userRepository.findById(id).get();
 	}
 
-	@ApiOperation(value = "It will delete User")
-	@DeleteMapping(path = "/{id}")
-	public ResponseEntity<String> deleteById(@PathVariable int id) {
-		 service.deleteById(id);
-		 return new ResponseEntity<>("User deleted", HttpStatus.OK);
+	@PutMapping("/{id}")
+	public User updateUser(@PathVariable Integer id, @RequestBody User user) {
+		user.setId(id);
+
+		return userRepository.saveAndFlush(user);
 	}
+
+	@DeleteMapping("/{id}")
+	public void deleteUser(@PathVariable Integer id) {
+		userRepository.deleteById(id);
+	}
+
 
 }

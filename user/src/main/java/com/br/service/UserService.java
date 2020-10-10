@@ -1,5 +1,7 @@
 package com.br.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -9,30 +11,28 @@ import com.br.repository.UserRepository;
 @Service
 public class UserService {
 	
-	private final UserRepository repository;
-	
 	@Autowired
-	public UserService(UserRepository repository) {
-		this.repository = repository;
-	}
+	private  UserRepository repository;
+	
 
-	public User save(User user) {
-		return repository.save(user);
-	}
-
-	public Iterable<User> findAll() {
+	public List<User> viewAllUsers() {
 		return repository.findAll();
 	}
-	
-	public User findById(int id) {
-		return repository.findById(id).get();
-	}	
 
-	public User update(User user) {
-		return repository.save(user);
+
+	public User createUser(User user) {
+		return repository.saveAndFlush(user);
 	}
 
-	public void deleteById(int id) {
+	public User viewUser(Integer id) {
+		return repository.findById(id).get();
+	}
+
+	public User updateUser(User user) {
+		return repository.saveAndFlush(user);
+	}
+
+	public void deleteUser(Integer id) {
 		repository.deleteById(id);
 	}
 }

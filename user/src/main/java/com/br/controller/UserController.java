@@ -16,8 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.br.entity.User;
 
-import com.br.repository.UserRepository;
-
+import com.br.service.UserService;
 
 import java.util.List;
 import java.util.Optional;
@@ -27,34 +26,32 @@ import java.util.Optional;
 public class UserController {
 
 	@Autowired
-	private UserRepository userRepository;
+	private UserService service;
 
 	@GetMapping
 	public List<User> viewAllUsers() {
-		return userRepository.findAll();
+		return service.viewAllUsers();
 	}
 
 	@PostMapping
 	public User createUser(@RequestBody User user) {
-		return userRepository.saveAndFlush(user);
+		return service.createUser(user);
 	}
 
 	@GetMapping("/{id}")
 	public User viewUser(@PathVariable Integer id) {
-		return userRepository.findById(id).get();
+		return service.viewUser(id);
 	}
 
 	@PutMapping("/{id}")
 	public User updateUser(@PathVariable Integer id, @RequestBody User user) {
 		user.setId(id);
-
-		return userRepository.saveAndFlush(user);
+		return service.updateUser(user);
 	}
 
 	@DeleteMapping("/{id}")
 	public void deleteUser(@PathVariable Integer id) {
-		userRepository.deleteById(id);
+		service.deleteUser(id);
 	}
-
 
 }

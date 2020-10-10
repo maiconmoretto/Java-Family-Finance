@@ -1,4 +1,5 @@
 com/br/controller/CategoryController.class
 com/br/entity/Category.class
 com/br/Application.class
+com/br/service/CategoryService.class
 com/br/repository/CategoryRepository.class

@@ -16,8 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.br.entity.Category;
 
-import com.br.repository.CategoryRepository;
-
+import com.br.service.CategoryService;
 
 import java.util.List;
 import java.util.Optional;
@@ -27,34 +26,32 @@ import java.util.Optional;
 public class CategoryController {
 
 	@Autowired
-	private CategoryRepository categoryRepository;
+	private CategoryService service;
 
 	@GetMapping
 	public List<Category> viewAllCategorys() {
-		return categoryRepository.findAll();
+		return service.viewAllCategorys();
 	}
 
 	@PostMapping
 	public Category createCategory(@RequestBody Category category) {
-		return categoryRepository.saveAndFlush(category);
+		return service.createCategory(category);
 	}
 
 	@GetMapping("/{id}")
 	public Category viewCategory(@PathVariable Integer id) {
-		return categoryRepository.findById(id).get();
+		return service.viewCategory(id);
 	}
 
 	@PutMapping("/{id}")
 	public Category updateCategory(@PathVariable Integer id, @RequestBody Category category) {
 		category.setId(id);
-
-		return categoryRepository.saveAndFlush(category);
+		return service.updateCategory(category);
 	}
 
 	@DeleteMapping("/{id}")
 	public void deleteCategory(@PathVariable Integer id) {
-		categoryRepository.deleteById(id);
+		service.deleteCategory(id);
 	}
-
 
 }

@@ -2,3 +2,4 @@
 /home/maicon/Documents/projects/java/springboot/Java-Family-Finance/category/src/main/java/com/br/repository/CategoryRepository.java
 /home/maicon/Documents/projects/java/springboot/Java-Family-Finance/category/src/main/java/com/br/entity/Category.java
 /home/maicon/Documents/projects/java/springboot/Java-Family-Finance/category/src/main/java/com/br/controller/CategoryController.java
+/home/maicon/Documents/projects/java/springboot/Java-Family-Finance/category/src/main/java/com/br/service/CategoryService.java

@@ -1,9 +1,5 @@
 com/br/IncomeControllerTests.class
 com/br/SharedFinanceRepositoryTest.class
 com/br/SharedFinanceControllerTests.class
-com/br/CategoryControllerTests.class
-com/br/CategoryRepositoryTest.class
-com/br/ExpensesRepositoryTest.class
-com/br/ExpensesControllerTests.class
 com/br/TestingApplicationTests.class
 com/br/IncomeRepositoryTest.class

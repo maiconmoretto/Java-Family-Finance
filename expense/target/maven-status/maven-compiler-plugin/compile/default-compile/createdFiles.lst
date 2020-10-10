@@ -1,0 +1,5 @@
+com/br/repository/ExpenseRepository.class
+com/br/service/ExpenseService.class
+com/br/Application.class
+com/br/controller/ExpenseController.class
+com/br/entity/Expense.class

@@ -90,8 +90,8 @@ public class ExpenseRepositoryTest {
 
 	@Test
 	public void findById() {
-		Optional<Expense> agenda = Optional.of(new Expense());
-		when(repository.findById(1)).thenReturn(agenda);
+		Optional<Expense> expense = Optional.of(new Expense());
+		when(repository.findById(1)).thenReturn(expense);
 		Optional<Expense> result = repository.findById(1);
 		assertEquals("description", result.get().getDescription());
 		assertEquals(3.33, result.get().getValue(), 0.00);

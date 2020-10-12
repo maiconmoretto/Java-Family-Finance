@@ -1,13 +1,8 @@
+/home/maicon/Documents/projects/java/springboot/Java-Family-Finance/finance/src/main/java/com/br/model/UserDTO.java
 /home/maicon/Documents/projects/java/springboot/Java-Family-Finance/finance/src/main/java/com/br/service/SharedFinanceService.java
-/home/maicon/Documents/projects/java/springboot/Java-Family-Finance/finance/src/main/java/com/br/model/IncomeDTO.java
+/home/maicon/Documents/projects/java/springboot/Java-Family-Finance/finance/src/main/java/com/br/model/SharedFinance.java
 /home/maicon/Documents/projects/java/springboot/Java-Family-Finance/finance/src/main/java/com/br/Application.java
-/home/maicon/Documents/projects/java/springboot/Java-Family-Finance/finance/src/main/java/com/br/repository/IncomeRepository.java
+/home/maicon/Documents/projects/java/springboot/Java-Family-Finance/finance/src/main/java/com/br/controller/SharedFinanceController.java
 /home/maicon/Documents/projects/java/springboot/Java-Family-Finance/finance/src/main/java/com/br/model/SharedFinanceDTO.java
 /home/maicon/Documents/projects/java/springboot/Java-Family-Finance/finance/src/main/java/com/br/user/UserServiceClient.java
 /home/maicon/Documents/projects/java/springboot/Java-Family-Finance/finance/src/main/java/com/br/repository/SharedFinanceRepository.java
-/home/maicon/Documents/projects/java/springboot/Java-Family-Finance/finance/src/main/java/com/br/model/UserDTO.java
-/home/maicon/Documents/projects/java/springboot/Java-Family-Finance/finance/src/main/java/com/br/service/IncomeService.java
-/home/maicon/Documents/projects/java/springboot/Java-Family-Finance/finance/src/main/java/com/br/model/Income.java
-/home/maicon/Documents/projects/java/springboot/Java-Family-Finance/finance/src/main/java/com/br/model/SharedFinance.java
-/home/maicon/Documents/projects/java/springboot/Java-Family-Finance/finance/src/main/java/com/br/controller/IncomeController.java
-/home/maicon/Documents/projects/java/springboot/Java-Family-Finance/finance/src/main/java/com/br/controller/SharedFinanceController.java

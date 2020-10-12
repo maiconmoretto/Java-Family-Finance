@@ -53,6 +53,30 @@ services:
     ports:
       - "6034:3306"
 
+  income:
+    build: ./income/
+    restart: always
+    expose:
+      - "8184"
+    ports:
+      - 8184:8184
+    depends_on:
+      - docker-mysql-income
+
+
+  docker-mysql-income:
+    restart: always
+    container_name: docker-mysql-income
+    image: mysql
+    environment:
+      MYSQL_DATABASE: income
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_ROOT_HOST: '%'
+    volumes:
+      - ./sql:/docker-entrypoint-initdb.d
+    ports:
+      - "6037:3306"
+
 
   finance:
     restart: on-failure

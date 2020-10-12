@@ -20,16 +20,16 @@ public class ExpenseService {
 	}
 
 
-	public Expense createExpense(Expense category) {
-		return repository.saveAndFlush(category);
+	public Expense createExpense(Expense expense) {
+		return repository.saveAndFlush(expense);
 	}
 
 	public Expense viewExpense(Integer id) {
 		return repository.findById(id).get();
 	}
 
-	public Expense updateExpense(Expense category) {
-		return repository.saveAndFlush(category);
+	public Expense updateExpense(Expense expense) {
+		return repository.saveAndFlush(expense);
 	}
 
 	public void deleteExpense(Integer id) {

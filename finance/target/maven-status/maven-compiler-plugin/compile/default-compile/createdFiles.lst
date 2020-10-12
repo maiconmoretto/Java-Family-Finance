@@ -1,13 +1,8 @@
-com/br/service/IncomeService.class
-com/br/model/UserDTO.class
-com/br/user/UserServiceClient.class
-com/br/model/IncomeDTO.class
-com/br/Application.class
-com/br/model/SharedFinanceDTO.class
 com/br/repository/SharedFinanceRepository.class
+com/br/model/UserDTO.class
 com/br/service/SharedFinanceService.class
 com/br/model/SharedFinance.class
 com/br/controller/SharedFinanceController.class
-com/br/controller/IncomeController.class
-com/br/repository/IncomeRepository.class
-com/br/model/Income.class
+com/br/user/UserServiceClient.class
+com/br/Application.class
+com/br/model/SharedFinanceDTO.class

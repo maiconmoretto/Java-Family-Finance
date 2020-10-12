@@ -1,0 +1,5 @@
+com/br/controller/IncomeController.class
+com/br/repository/IncomeRepository.class
+com/br/service/IncomeService.class
+com/br/entity/Income.class
+com/br/Application.class

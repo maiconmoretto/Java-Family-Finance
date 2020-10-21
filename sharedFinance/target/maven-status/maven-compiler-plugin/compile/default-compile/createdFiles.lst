@@ -1,0 +1,5 @@
+com\br\Application.class
+com\br\controller\SharedFinanceController.class
+com\br\service\SharedFinanceService.class
+com\br\entity\SharedFinance.class
+com\br\repository\SharedFinanceRepository.class

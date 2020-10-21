@@ -53,6 +53,31 @@ services:
     ports:
       - "6034:3306"
 
+  shared-finance:
+    build: ./sharedFinance/
+    restart: always
+    expose:
+      - "8185"
+    ports:
+      - 8185:8185
+    depends_on:
+      - docker-mysql-shared-finance
+
+
+  docker-mysql-shared-finance:
+    restart: always
+    container_name: docker-mysql-shared-finance
+    image: mysql
+    environment:
+      MYSQL_DATABASE: sharedFinance
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_ROOT_HOST: '%'
+    volumes:
+      - ./sql:/docker-entrypoint-initdb.d
+    ports:
+      - "6038:3306"
+
+
   income:
     build: ./income/
     restart: always

@@ -20,6 +20,8 @@ import com.br.service.IncomeService;
 
 import java.util.List;
 import java.util.Optional;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 
 @RestController
 @RequestMapping("income")
@@ -28,27 +30,32 @@ public class IncomeController {
 	@Autowired
 	private IncomeService service;
 
+	@ApiOperation(value = "It will return list of Income")
 	@GetMapping
 	public List<Income> viewAllIncomes() {
 		return service.viewAllIncomes();
 	}
 
+	@ApiOperation(value = "It will add new Income")
 	@PostMapping
 	public Income createIncome(@RequestBody Income income) {
 		return service.createIncome(income);
 	}
 
+	@ApiOperation(value = "It will get a Income by Id")
 	@GetMapping("/{id}")
 	public Income viewIncome(@PathVariable Integer id) {
 		return service.viewIncome(id);
 	}
 
+	@ApiOperation(value = "It will update Income")
 	@PutMapping("/{id}")
 	public Income updateIncome(@PathVariable Integer id, @RequestBody Income income) {
 		income.setId(id);
 		return service.updateIncome(income);
 	}
 
+	@ApiOperation(value = "It will delete Income")
 	@DeleteMapping("/{id}")
 	public void deleteIncome(@PathVariable Integer id) {
 		service.deleteIncome(id);

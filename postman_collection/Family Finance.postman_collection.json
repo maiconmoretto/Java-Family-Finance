@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "9c13528e-c4be-40db-b1cc-5bb63940fae6",
+		"_postman_id": "c77aba7b-d49a-4d6c-ba0c-2871adad02d7",
 		"name": "Family Finance",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -31,15 +31,13 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:8080/api/v1/expenses/",
+							"raw": "localhost:8183/expense/",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "8183",
 							"path": [
-								"api",
-								"v1",
-								"expenses",
+								"expense",
 								""
 							]
 						}
@@ -69,16 +67,14 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:8080/api/v1/expenses/4",
+							"raw": "localhost:8183/expense/2",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "8183",
 							"path": [
-								"api",
-								"v1",
-								"expenses",
-								"4"
+								"expense",
+								"2"
 							]
 						}
 					},
@@ -90,15 +86,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:8080/api/v1/expenses/",
+							"raw": "localhost:8183/expense/",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "8183",
 							"path": [
-								"api",
-								"v1",
-								"expenses",
+								"expense",
 								""
 							]
 						}
@@ -111,38 +105,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:8080/api/v1/expenses/1",
+							"raw": "localhost:8183/expense/2",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "8183",
 							"path": [
-								"api",
-								"v1",
-								"expenses",
-								"1"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "GET ALL BY ID USER",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "localhost:8080/api/v1/expenses/findAllByIdUser/",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"api",
-								"v1",
-								"expenses",
-								"findAllByIdUser",
-								""
+								"expense",
+								"2"
 							]
 						}
 					},
@@ -154,15 +124,13 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "localhost:8080/api/v1/expenses/1",
+							"raw": "localhost:8183/expense/1",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "8183",
 							"path": [
-								"api",
-								"v1",
-								"expenses",
+								"expense",
 								"1"
 							]
 						}
@@ -174,7 +142,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "98e8cbce-51df-4569-8334-29c50105dae8",
+						"id": "db8c1000-f824-4731-a032-736d83f8b59a",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -184,7 +152,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "4a09cc61-a798-422d-8a4a-68602b2c84c4",
+						"id": "e9bec0a6-8a01-4965-82c2-444c400485ba",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -220,14 +188,12 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:8080/api/v1/user",
+							"raw": "localhost:8182/user",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "8182",
 							"path": [
-								"api",
-								"v1",
 								"user"
 							]
 						}
@@ -257,14 +223,12 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:8080/api/v1/user/2",
+							"raw": "localhost:8182/user/2",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "8182",
 							"path": [
-								"api",
-								"v1",
 								"user",
 								"2"
 							]
@@ -278,16 +242,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:8080/api/v1/user/",
+							"raw": "localhost:8182/user",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "8182",
 							"path": [
-								"api",
-								"v1",
-								"user",
-								""
+								"user"
 							]
 						}
 					},
@@ -299,16 +260,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:8080/api/v1/user/1",
+							"raw": "localhost:8182/user/2",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "8182",
 							"path": [
-								"api",
-								"v1",
 								"user",
-								"1"
+								"2"
 							]
 						}
 					},
@@ -320,16 +279,14 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "localhost:8080/api/v1/user/1",
+							"raw": "localhost:8182/user/2",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "8182",
 							"path": [
-								"api",
-								"v1",
 								"user",
-								"1"
+								"2"
 							]
 						}
 					},
@@ -340,7 +297,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "c98e23f2-47ae-43b8-8d04-4ec9a3bb0bf6",
+						"id": "e1843c4d-ffb7-4569-bdcb-16045c9746f3",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -350,7 +307,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "8c50f9be-5e5e-497f-95b8-891a50390dea",
+						"id": "4993c9b0-0490-420f-b531-0934da203946",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -386,14 +343,12 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:8080/api/v1/income/",
+							"raw": "localhost:8184/income/",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "8184",
 							"path": [
-								"api",
-								"v1",
 								"income",
 								""
 							]
@@ -424,16 +379,14 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:8080/api/v1/income/3",
+							"raw": "localhost:8184/income/2",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "8184",
 							"path": [
-								"api",
-								"v1",
 								"income",
-								"3"
+								"2"
 							]
 						}
 					},
@@ -445,14 +398,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:8080/api/v1/income/",
+							"raw": "localhost:8184/income/",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "8184",
 							"path": [
-								"api",
-								"v1",
 								"income",
 								""
 							]
@@ -466,16 +417,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:8080/api/v1/income/4",
+							"raw": "localhost:8184/income/3",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "8184",
 							"path": [
-								"api",
-								"v1",
 								"income",
-								"4"
+								"3"
 							]
 						}
 					},
@@ -487,16 +436,14 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "localhost:8080/api/v1/income/3",
+							"raw": "localhost:8184/income/4",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "8184",
 							"path": [
-								"api",
-								"v1",
 								"income",
-								"3"
+								"4"
 							]
 						}
 					},
@@ -507,7 +454,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "4f44c24d-e823-4e06-9dc0-841498d04e7a",
+						"id": "0e32a7a5-fb59-409e-b8aa-d505f8231d85",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -517,7 +464,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "b37850ed-8af7-4b6a-851b-83817dc8b707",
+						"id": "b593ac84-4d9a-440d-bd0d-9b8a618de50b",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -545,7 +492,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n   \"description\": \"nova categoria\",\n   \"createdBy\": 2\n}",
+							"raw": "{\n   \"description\": \"nova categoria 2\",\n   \"createdBy\": 2\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -553,14 +500,12 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:8080/api/v1/category/",
+							"raw": "localhost:8186/category/",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "8186",
 							"path": [
-								"api",
-								"v1",
 								"category",
 								""
 							]
@@ -591,11 +536,11 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:8080/api/v1/category/5",
+							"raw": "localhost:8186/api/v1/category/5",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "8186",
 							"path": [
 								"api",
 								"v1",
@@ -612,14 +557,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:8080/api/v1/category/",
+							"raw": "localhost:8186/category/",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "8186",
 							"path": [
-								"api",
-								"v1",
 								"category",
 								""
 							]
@@ -633,14 +576,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:8080/api/v1/category/5",
+							"raw": "localhost:8186/category/5",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "8186",
 							"path": [
-								"api",
-								"v1",
 								"category",
 								"5"
 							]
@@ -654,14 +595,12 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "localhost:8080/api/v1/category/1",
+							"raw": "localhost:8186/category/1",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "8186",
 							"path": [
-								"api",
-								"v1",
 								"category",
 								"1"
 							]
@@ -674,7 +613,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "ca0d725a-cee1-4481-8e9b-d2d7d3738696",
+						"id": "9ca9da13-e44a-48e8-9e18-ece251927059",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -684,7 +623,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "88820243-74ba-4585-94d7-a47baa010be9",
+						"id": "33513ffe-9aa9-45c4-b13b-75236d9d25ed",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -720,14 +659,12 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:8080/api/v1/sharedFinance/",
+							"raw": "localhost:8185/sharedFinance/",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "8185",
 							"path": [
-								"api",
-								"v1",
 								"sharedFinance",
 								""
 							]
@@ -758,14 +695,12 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:8080/api/v1/sharedFinance/3",
+							"raw": "localhost:8185/sharedFinance/3",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "8185",
 							"path": [
-								"api",
-								"v1",
 								"sharedFinance",
 								"3"
 							]
@@ -779,14 +714,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:8080/api/v1/sharedFinance/",
+							"raw": "localhost:8185/sharedFinance/",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "8185",
 							"path": [
-								"api",
-								"v1",
 								"sharedFinance",
 								""
 							]
@@ -800,14 +733,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:8080/api/v1/sharedFinance/5",
+							"raw": "localhost:8185/sharedFinance/5",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "8185",
 							"path": [
-								"api",
-								"v1",
 								"sharedFinance",
 								"5"
 							]
@@ -821,14 +752,12 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "localhost:8080/api/v1/sharedFinance/1",
+							"raw": "localhost:8185/sharedFinance/1",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "8185",
 							"path": [
-								"api",
-								"v1",
 								"sharedFinance",
 								"1"
 							]
@@ -841,7 +770,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "f0775882-d0bb-4891-9ffe-6fe4c2c73cdb",
+						"id": "b10c36e9-bb87-4334-b200-5bb175acc2e0",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -851,7 +780,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "33407ed0-89a5-4b14-89d3-7d3bb6ff7e08",
+						"id": "4adb72cd-9538-4531-b2c9-b74deeddc584",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -866,7 +795,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "4e1a71c2-f535-4936-9bba-d8b6614599b4",
+				"id": "5cdccab1-f6ad-42ff-978f-63686a27a3c3",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -876,7 +805,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "43595dfd-e4b8-4f1f-8f0d-bd7640928a88",
+				"id": "25396bbd-9312-4a73-a0cc-3a5c2b3af683",
 				"type": "text/javascript",
 				"exec": [
 					""

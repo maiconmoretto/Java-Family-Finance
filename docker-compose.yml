@@ -147,9 +147,9 @@ services:
     restart: on-failure
     build: ./category/
     expose:
-      - "10333"
+      - "8186"
     ports:
-      - 10333:10333
+      - 8186:8186
     environment:
       WAIT_HOSTS: mysql:3306
     depends_on:

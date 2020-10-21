@@ -25,7 +25,7 @@ import io.swagger.annotations.ApiOperation;
 
 
 @RestController
-@Api(value = "API SharedFinance")
+@Api(value = "API Expense")
 @RequestMapping("expense")
 public class ExpenseController {
 

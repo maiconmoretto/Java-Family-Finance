@@ -24,7 +24,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 
 @RestController
-@Api(value = "API SharedFinance")
+@Api(value = "API Category")
 @RequestMapping("category")
 public class CategoryController {
 

@@ -20,35 +20,43 @@ import com.br.service.CategoryService;
 
 import java.util.List;
 import java.util.Optional;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 
 @RestController
+@Api(value = "API SharedFinance")
 @RequestMapping("category")
 public class CategoryController {
 
 	@Autowired
 	private CategoryService service;
 
+	@ApiOperation(value = "It will return list of Category")
 	@GetMapping
 	public List<Category> viewAllCategorys() {
 		return service.viewAllCategorys();
 	}
 
+	@ApiOperation(value = "It will add new Category")
 	@PostMapping
 	public Category createCategory(@RequestBody Category category) {
 		return service.createCategory(category);
 	}
 
+	@ApiOperation(value = "It will get a Category by Id")
 	@GetMapping("/{id}")
 	public Category viewCategory(@PathVariable Integer id) {
 		return service.viewCategory(id);
 	}
 
+	@ApiOperation(value = "It will update Category")
 	@PutMapping("/{id}")
 	public Category updateCategory(@PathVariable Integer id, @RequestBody Category category) {
 		category.setId(id);
 		return service.updateCategory(category);
 	}
 
+	@ApiOperation(value = "It will delete  Category")
 	@DeleteMapping("/{id}")
 	public void deleteCategory(@PathVariable Integer id) {
 		service.deleteCategory(id);

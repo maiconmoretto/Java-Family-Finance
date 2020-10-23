@@ -151,6 +151,7 @@ services:
     ports:
       - 8186:8186
     environment:
+      USER_SERVICE_URL: http://user:8182
       WAIT_HOSTS: mysql:3306
     depends_on:
       - docker-mysql-category

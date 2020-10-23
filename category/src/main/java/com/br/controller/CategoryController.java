@@ -1,6 +1,7 @@
 
 package com.br.controller;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -13,9 +14,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 
 import com.br.entity.Category;
-
 import com.br.service.CategoryService;
 
 import java.util.List;
@@ -39,8 +41,8 @@ public class CategoryController {
 
 	@ApiOperation(value = "It will add new Category")
 	@PostMapping
-	public Category createCategory(@RequestBody Category category) {
-		return service.createCategory(category);
+	public ResponseEntity<Category> save(@RequestBody Category category, int createdBy) {
+		return new ResponseEntity<>(service.createCategory(category, createdBy), HttpStatus.CREATED);
 	}
 
 	@ApiOperation(value = "It will get a Category by Id")

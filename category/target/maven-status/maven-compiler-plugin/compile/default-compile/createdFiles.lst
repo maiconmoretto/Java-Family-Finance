@@ -2,4 +2,6 @@ com\br\service\CategoryService.class
 com\br\Application.class
 com\br\repository\CategoryRepository.class
 com\br\controller\CategoryController.class
+com\br\entity\UserDTO.class
+com\br\service\UserServiceClient.class
 com\br\entity\Category.class
